@@ -131,7 +131,7 @@ function displayEquipment(xmlDoc) {
     });
 
     // clickDiv('equip-abilities-filter')
-     
+
     clickDiv('equip-weapons-filter')
     clickDiv('equip-legendary-filter')
     cboxLogic()
@@ -159,8 +159,16 @@ function cboxLogic() {
 function hideInfoLogic(cbox) {
     const separators = cbox.nextElementSibling.querySelectorAll('.separator');
     const pElements = cbox.nextElementSibling.querySelectorAll('p:not(.no-display)');
-    const displayValue = cbox.checked ? 'block' : 'none';
+    const h2s = cbox.nextElementSibling.querySelectorAll("h2");
+    const displayValue = cbox.checked ? "block" : "none";
 
+    h2s.forEach((h2) => {
+        h2.style.whiteSpace = cbox.checked ? "normal" : "nowrap";
+        h2.style.overflow = cbox.checked ? "visible" : "hidden";
+        h2.style.textOverflow = cbox.checked ? "clip" : "ellipsis";
+    });
+    
+    
     separators.forEach(sep => sep.style.display = displayValue);
     pElements.forEach(p => p.style.display = displayValue);
 }
@@ -216,4 +224,4 @@ function clickDiv(s) {
 }
 
 // Load the XML when the page is loaded
-document.addEventListener('DOMContentLoaded', loadXML);
+//document.addEventListener('DOMContentLoaded', loadXML);

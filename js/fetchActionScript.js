@@ -15,6 +15,7 @@ Promise.all([
         .then(response => response.text())
         .then(data => filterTooltipData(data)),
 ])
+.then(loadXML)
 //.then(() => Equipment()) // Now Equipment() only runs after both fetches complete
 .catch(console.error);
 
