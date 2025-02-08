@@ -14,10 +14,6 @@ Promise.all([
     fetch('as/src-rotmg-ui-tooltip-EquipmentToolTip.as')
         .then(response => response.text())
         .then(data => filterTooltipData(data)),
-
-    fetch("_assets/11_rotmg.assets.EmbeddedData_CustomEquipCXML.xml")
-        .then(res => res.text())
-        .then(str => { CustomEquip = new window.DOMParser().parseFromString(str, "text/xml") })
 ])
 //.then(() => Equipment()) // Now Equipment() only runs after both fetches complete
 .catch(console.error);

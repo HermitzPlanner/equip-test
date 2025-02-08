@@ -63,16 +63,16 @@ function normalizeId(string) {
 
 function normalizeFile(string) {
     const fileMappings = {
-        "halloween24": "_assets/174_rotmg.assets.EmbeddedAssets_Halloween24Embed.png",
-        "lofiObj7": "_assets/204_rotmg.assets.EmbeddedAssets_LofiObj7Embed.png",
-        "lofiObj6": "_assets/203_rotmg.assets.EmbeddedAssets_LofiObj6Embed.png",
-        "shmittySheet": "_assets/48_rotmg.assets.EmbeddedAssets_ShmittySheetEmbed.png",
-        "lofiObj3": "_assets/113_rotmg.assets.EmbeddedAssets_LofiObj3Embed.png",
-        "lofiObj5": "_assets/220_rotmg.assets.EmbeddedAssets_LofiObj5Embed.png",
-        "gPlusSheet": "_assets/27_rotmg.assets.EmbeddedAssets_GPlusSheetEmbed.png",
-        "customObjects64x64": "_assets/211_rotmg.assets.EmbeddedAssets_CustomObjects64x64.png",
-        "lostHallsObjects8x8": "_assets/59_rotmg.assets.EmbeddedAssets_LostHallsObjects8x8.png",
-        "lofiObj2": "_assets/30_rotmg.assets.EmbeddedAssets_LofiObj2Embed.png"
+        "halloween24": "assets/174_rotmg.assets.EmbeddedAssets_Halloween24Embed.png",
+        "lofiObj7": "assets/204_rotmg.assets.EmbeddedAssets_LofiObj7Embed.png",
+        "lofiObj6": "assets/203_rotmg.assets.EmbeddedAssets_LofiObj6Embed.png",
+        "shmittySheet": "assets/48_rotmg.assets.EmbeddedAssets_ShmittySheetEmbed.png",
+        "lofiObj3": "assets/113_rotmg.assets.EmbeddedAssets_LofiObj3Embed.png",
+        "lofiObj5": "assets/220_rotmg.assets.EmbeddedAssets_LofiObj5Embed.png",
+        "gPlusSheet": "assets/27_rotmg.assets.EmbeddedAssets_GPlusSheetEmbed.png",
+        "customObjects64x64": "assets/211_rotmg.assets.EmbeddedAssets_CustomObjects64x64.png",
+        "lostHallsObjects8x8": "assets/59_rotmg.assets.EmbeddedAssets_LostHallsObjects8x8.png",
+        "lofiObj2": "assets/30_rotmg.assets.EmbeddedAssets_LofiObj2Embed.png"
     };
 
     return fileMappings[string] || "no file name";

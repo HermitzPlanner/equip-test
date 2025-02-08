@@ -1,6 +1,6 @@
 function loadXML() {
     // Change 'data.xml' to the path of your XML file
-    fetch('_assets/11_rotmg.assets.EmbeddedData_CustomEquipCXML.xml')
+    fetch('assets/11_rotmg.assets.EmbeddedData_CustomEquipCXML.xml')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
