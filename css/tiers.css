@@ -1,0 +1,62 @@
+.stat-color {
+    color: #f2f287;
+}
+
+.untiered {
+    color: #8a2be2 !important;
+}
+
+.untiered-hover {
+    box-shadow: 12px 12px 12px var(--shadow1), -3px -3px 10px #8a2be2 !important;
+    transition: 300ms;
+    background-color: hsl(271, 76%, 53%, 0.1);
+}
+
+.HI0, .HI1, .HI2, .HI3, .HI4 {
+    color: #51d3ff !important;
+}
+
+.hunter-hover {
+    box-shadow: 12px 12px 12px var(--shadow1), -3px -3px 10px #51d3ff !important;
+    transition: 300ms;
+    background-color: hsl(195, 100%, 66%, 0.1);
+}
+
+.HF0, .HF1, .HF2, .HF3, .HF4 {
+    color: #ff6e00 !important;
+}
+
+.H5 {
+    color: #7061ff !important;
+}
+
+.legendary {
+    color: #ffcd47 !important;
+}
+
+.legendary-hover {
+    box-shadow: 12px 12px 12px var(--shadow1), -3px -3px 10px #ffcd47 !important;
+    transition: 300ms;
+    background-color: hsl(44, 100%, 64%, 0.1);
+}
+
+.demonic {
+    color: #9e192b !important;
+}
+
+.demonic-hover {
+    box-shadow: 12px 12px 12px var(--shadow1), -3px -3px 10px #9e192b !important;
+    transition: 300ms;
+    background-color: hsl(352, 73%, 36%, 0.2);
+}
+
+.cosmic {
+    color: #f3388c !important;
+}
+
+.cosmic-hover {
+    box-shadow: 12px 12px 12px var(--shadow1), -3px -3px 10px #f3388c !important;
+    transition: 300ms;
+    background-color: hsl(333, 89%, 59%, 0.1);
+}
+

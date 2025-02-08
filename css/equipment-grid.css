@@ -1,0 +1,39 @@
+.equipment {
+    display: grid;
+    grid-template-columns: 60px 1fr; /* Fixed width (60px) for canvas, rest for text */
+    grid-template-rows: auto;        /* Rows adjust based on content */
+    gap: 10px;
+    padding: 10px;
+    align-items: start;             /* Aligns items at the top */
+}
+
+.equipment canvas {
+    grid-column: 1;        /* Canvas takes the first column */
+    grid-row: span 2;       /* Spans vertically across all rows (up to the 4 <p> elements) */
+    width: 60px;            /* Canvas width */
+   /*  align-self: center;      Vertically centers the canvas */
+}
+
+.equipment h2,
+.equipment h3 {
+    grid-column: 2;        /* Both h2 and h3 will be in the second column */
+}
+
+.equipment h2 {
+    grid-row: 1;            /* h2 in the first row */
+    align-self: center;
+}
+
+.equipment h3 {
+    grid-row: 2;            /* h3 in the second row */
+    align-self: center;
+}
+
+.equipment p {
+    grid-column: span 2;    /* p elements span both columns */
+    grid-row: span 1;       /* Each <p> takes one full row */
+}
+
+.equipment .separator {
+    grid-column: span 2;
+}

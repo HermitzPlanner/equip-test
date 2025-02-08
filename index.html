@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Test Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tiers.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link rel="stylesheet" href="css/equipment-filters.css">
+    <link rel="stylesheet" href="css/equipment-grid.css">
+    <link rel="stylesheet" href="css/viewer.css">
+
+    <script defer src="js/normalize.js"></script>
+    <script defer src="js/renderCanvas.js"></script>
+    <script defer src="js/FetchActionScript.js"></script>
+
+    <script defer src="js/fragments.js"></script>
+    <script defer src="js/_app.js"></script>
+    <script defer src="js/buttons-equipment.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <h1>Equipment Test Site |<span style="font-size: 70%; font-weight: 300;">  @hermitzmusic (discord)</span></h1>
+        <div id="equipment-buttons">
+            <div class="search-div">
+                <input type="text" id="search-input" placeholder="Search...">
+                <!-- <img src="https://raw.githubusercontent.com/HermitzPlanner/planner-images/main/svg/search.svg" alt=""> -->
+            </div>
+            
+            <div id="equipment-buttons-row-1">
+                <label>
+                    <input type="radio" name="slot" value="All" checked>
+                    <div class="equipment-radio equipment-row-1">All</div>
+                </label>
+                <label id="equip-weapons-filter">
+                    <input type="radio" name="slot" value="Weapon" >
+                    <div class="equipment-radio equipment-row-1">Weapons</div>
+                </label>
+                <label>
+                    <input type="radio" name="slot" value="Armor">
+                    <div class="equipment-radio equipment-row-1">Armors</div>
+                </label>
+                <label id="equip-abilities-filter">
+                    <input type="radio" name="slot" value="Ability">
+                    <div class="equipment-radio equipment-row-1">Abilities</div>
+                </label>
+                <label>
+                    <input type="radio" name="slot" value="Ring">
+                    <div class="equipment-radio equipment-row-1">Rings</div>
+                </label>
+                <label>
+                    <input type="radio" name="slot" value="Consumable">
+                    <div class="equipment-radio equipment-row-1">Consumables</div>
+                </label>
+            </div>
+            <div id="equipment-buttons-row-2">
+                <label>
+                    <input type="radio" name="rarity" value="All" checked>
+                    <div class="equipment-radio equipment-row-2">All</div>
+                </label>
+                <label id="equip-demonic-filter">
+                    <input type="radio" name="rarity" value="demonic">
+                    <div class="equipment-radio equipment-row-2">Demonic</div>
+                </label>
+                <label id="equip-legendary-filter">
+                    <input type="radio" name="rarity" value="legendary">
+                    <div class="equipment-radio equipment-row-2">Legendary</div>
+                </label>
+                <label>
+                    <input type="radio" name="rarity" value="untiered">
+                    <div class="equipment-radio equipment-row-2">Untiered</div>
+                </label>
+                <label>
+                    <input type="radio" name="rarity" value="hunter">
+                    <div class="equipment-radio equipment-row-2">Hunter</div>
+                </label>
+            </div>
+            
+            <div id="equipment-buttons-row-3">
+                
+            </div>
+        </div>
+        <div id="equipment-container">
+            <!-- Objects will be dynamically inserted here -->
+        </div>
+    </main>
+    <div id="viewer">
+        
+        <button class="quit-btn" id="quit-btn" onclick="quitViewer()">
+            <img width="60px" height="60px" style="filter: invert();"
+                src="https://raw.githubusercontent.com/HermitzPlanner/planner-images/main/svg/x.svg" alt="">
+        </button>
+    </div>
+</body>
+
+</html>

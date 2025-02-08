@@ -1,0 +1,76 @@
+#equipment-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#equipment-container input {
+    display: none;
+}
+
+#equipment-container label {
+    width: fit-content;
+    height: fit-content;
+}
+
+.equipment {
+    position: relative;
+    background-color: var(--equip-bg);
+    color: var(--equip-txt);
+    width: 250px;
+    border: 1px solid var(--equip-border);
+    border-radius: 10px;
+    height: fit-content;
+
+}
+
+.equipment:hover {
+    scale: 1.05;
+    cursor: pointer;
+    transition: 300ms;
+
+}
+
+.equipment h2,
+h3 {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.equipment h2 {
+     font-size: 1em; 
+
+   /* font-size: clamp(0.8em, 0.5em, 1.2em);
+    white-space: nowrap;  Prevents wrapping */
+    /*
+    line-height: 1.2em;
+    min-height: 2.4em;
+    
+    display: flex;
+    align-items: center;*/
+    
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    
+}
+
+
+.equipment h3 {
+    
+    font-size: 0.9em;
+    /* font-weight: 300; */
+}
+
+.equipment p {
+    display: none;
+    margin: 0;
+}
+
+.equipment .separator {
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid var(--equip-border);
+}

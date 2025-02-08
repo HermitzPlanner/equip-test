@@ -1,0 +1,71 @@
+.search-div {
+    outline: 0px solid pink;
+    position: relative;
+    width: 20%;
+
+    img {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        max-height: 50%;
+        filter: invert();
+    }
+}
+
+#equipment-buttons input[type="radio"] {
+    display: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    background-color: var(--equip-bg);
+    color: var(--text);
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--equip-border);
+    border-radius: 10px;
+    padding-left: 10px;
+    color: var(--text);
+    font-family: 'MyriadPro';
+    font-size: 125%;
+}
+
+input::placeholder {
+    color: var(--equip-txt);
+    font-family: "Roboto", serif;
+}
+
+#equipment-buttons, #equipment-buttons-row-3, #equipment-buttons-row-2, #equipment-buttons-row-1 {
+    /* border-bottom: 1px solid var(--text-very-dim); */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#equipment-buttons-row-3, #equipment-buttons-row-2, #equipment-buttons-row-1 {
+    width: 100%;
+    /* padding-bottom: 20px; */
+}
+
+.equipment-radio {
+    font-weight: 400;
+    text-transform: uppercase;
+
+    background: var(--equip-bg);
+    color: var(--equip-txt);
+    border-radius: 10px;
+    padding: 7px 12px;
+}
+
+.equipment-radio:hover {
+    scale: 1.13;
+    transition: 300ms;
+    color: #51d3ff;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + .equipment-radio {
+    color: #ff6e00;
+    transition: 300ms;
+  }
