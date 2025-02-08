@@ -1,4 +1,3 @@
-// Function to load and parse the XML file
 function loadXML() {
     // Change 'data.xml' to the path of your XML file
     fetch('_assets/11_rotmg.assets.EmbeddedData_CustomEquipCXML.xml')
