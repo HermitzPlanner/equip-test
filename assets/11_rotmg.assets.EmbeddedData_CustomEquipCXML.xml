@@ -38,12 +38,1505 @@ Item Effects:
  <DontHideAlly/>: 
  
  (Finish this on testing branch, there's some new tags there)
+ TODO: Also add missing tags to new minions from the reskins
  
  -->
 <Objects>
+<!--
+	vvvvv
+
+	0xce2
+	0xce3
+	0xce4
+	0xce5
+	0xce6
+	0xce7
+	0xce8
+	0xce9
+	0xcea
+	0xceb
+	0xcec
+-->
 
 
 
+<Object type="0xcf2" id="Void Fragment Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x132</Index>
+	</Texture>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x132</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x133</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x134</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x135</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x136</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x137</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x138</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x139</Index></Texture></Frame>
+	</Animation>
+	<Invincible/>
+	<Flying/>
+	<Ally/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<NoFollow/>
+	<NoPetCollision/>
+	<BypassNoWalk/>
+	<Size>90</Size>
+	<ShadowSize>40</ShadowSize>
+</Object>
+<Object type="0xcef" id="Void Shade Super Blast">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24_16</File>
+		<Index>0x48</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0xcee" id="Void Shade Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>halloween24_chars16x16</File>
+		<Index>6</Index>
+	</AnimatedTexture>
+	<Invincible/>
+	<Flying/>
+	<Ally/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<MinionTag/>
+	<FollowDistance>12</FollowDistance>
+	<Size>90</Size>
+	<ShadowSize>50</ShadowSize>
+	<Projectile id="0">
+		<ObjectId>Void Shade Super Blast</ObjectId>
+		<Speed>140</Speed>
+		<Damage>500</Damage>
+		<Size>150</Size>
+		<LifetimeMS>425</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+	</Projectile>
+</Object>
+<Object type="0xced" id="Sea Mare Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>chars16x16rEncounters</File>
+		<Index>13</Index>
+	</AnimatedTexture>
+	<Ally/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<NoFollow/>
+	<MinionTag/>
+	<FollowDistance>8</FollowDistance>
+	<Size>100</Size>
+	<ShadowSize>50</ShadowSize>
+</Object>
+<Object type="0xcec" id="Deep Sea Beast Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>chars16x16dEncounters2</File>
+		<Index>10</Index>
+	</AnimatedTexture>
+	<MaxHitPoints>750</MaxHitPoints>
+	<Defense>50</Defense>
+	<Ally/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<MinionTag/>
+	<FollowDistance>8</FollowDistance>
+	<Size>75</Size>
+	<ShadowSize>30</ShadowSize>
+	<Projectile id="0">
+		<ObjectId>Deep Sea Blast</ObjectId>
+		<Speed>42</Speed>
+		<Damage>450</Damage>
+		<Size>60</Size>
+		<LifetimeMS>600</LifetimeMS>
+		<MultiHit/>
+	</Projectile>
+	<Projectile id="1">
+		<ObjectId>Deep Sea Blast</ObjectId>
+		<Speed>55</Speed>
+		<Damage>450</Damage>
+		<Size>90</Size>
+		<LifetimeMS>600</LifetimeMS>
+		<MultiHit/>
+	</Projectile>
+	<Projectile id="2">
+		<ObjectId>Deep Sea Blast</ObjectId>
+		<Speed>70</Speed>
+		<Damage>450</Damage>
+		<Size>140</Size>
+		<LifetimeMS>600</LifetimeMS>
+		<MultiHit/>
+	</Projectile>
+</Object>
+<Object type="0xceb" id="Heart of the Storm">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x12a</Index>
+	</Texture>
+	<SlotType>9</SlotType>
+	<Description>A pristine blue crystal, imbued with the powers of the Siren. You can hear thunder when you put your ear to its surface.</Description>
+	<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="138" amount="150">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="139" amount="250">IncrementStat</ActivateOnEquip>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<Legendary/>
+	<ItemEffect>241</ItemEffect>
+</Object>
+<Object type="0xcea" id="Scornful Gaze">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x129</Index>
+	</Texture>
+	<SlotType>19</SlotType>
+	<Description>The hollowed skull of the Scorching Magician. Their magic power grew exponentially post-mortem, creating an unbelievably powerful weapon.</Description>
+	<ActivateOnEquip stat="3" amount="150">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="20">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="-10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="-60">IncrementStat</ActivateOnEquip>
+	<Usable/>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<MpCost>75</MpCost>
+	<Activate stat="28" amount="5" duration="3" noStack="false" hideParticles="true">StatBoostSelf</Activate>
+	<Activate heal="0" totalDamage="900" radius="3.5" noWisMod="heal" useWisMod="true">VampireBlast</Activate>
+	<Activate effect="Scorned" duration="1.5" range="3.5" stackDuration="true" maxDuration="10" hideParticles="true" target="enemy" center="mouse" useWisMod="true">GenericActivate</Activate>
+	<Legendary/>
+	<ItemEffect>240</ItemEffect>
+</Object>
+<Object type="0xce9" id="Budding Mantle">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x128</Index>
+	</Texture>
+	<SlotType>14</SlotType>
+	<Description>An overgrown robe, with blooming flowers rooted between its threads. A solemn reminder that we all shall return to the earth from which we came.</Description>
+	<ActivateOnEquip stat="3" amount="125">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="22" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="28">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="28">IncrementStat</ActivateOnEquip>
+	<BagType>10</BagType>
+	<Legendary/>
+	<ItemEffect>239</ItemEffect>
+	<FameBonus>7</FameBonus>
+</Object>
+<Object type="0xce8" id="Glacial Snowflake">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x127</Index>
+	</Texture>
+	<Rotation>90</Rotation>
+</Object>
+<Object type="0xce7" id="Glacial Tempest">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x126</Index>
+	</Texture>
+	<SlotType>8</SlotType>
+	<Description>A ceremonial mace, used by northern royalty to conjure blizzards at will. In the wrong hands, it could be used to start a new Ice Age.</Description>
+	<RateOfFire>1</RateOfFire>
+	<OldSound>magicShoot</OldSound>
+	<Projectile>
+		<ObjectId>Glacial Snowflake</ObjectId>
+		<MinDamage>100</MinDamage>
+		<MaxDamage>200</MaxDamage>
+		<Speed>125</Speed>
+		<LifetimeMS>1750</LifetimeMS>
+		<Magnitude>2.75</Magnitude>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Parametric/>
+		<FaceDir/>
+	</Projectile>
+	<BagType>10</BagType>
+	<NumProjectiles>3</NumProjectiles>
+	<ArcGap>150</ArcGap>
+	<FameBonus>7</FameBonus>
+	<Legendary/>
+	<ItemEffect>238</ItemEffect>
+</Object>
+<Object type="0xce6" id="Ballista Arrow">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x125</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0xce5" id="Demon Hunter's Ballista">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x124</Index>
+	</Texture>
+	<SlotType>3</SlotType>
+	<Description>Normal artillery does little in the way of damaging a foe such as The Hellhound. Experienced demon hunters tend to stick to the notion of “bigger is better,” even if in this case, the weapon is almost as heavy as you are.</Description>
+	<RateOfFire>0.22</RateOfFire>
+	<Projectile>
+		<ObjectId>Ballista Arrow</ObjectId>
+		<Speed>250</Speed>
+		<MinDamage>999</MinDamage>
+		<MaxDamage>1666</MaxDamage>
+		<LifetimeMS>266.4</LifetimeMS>
+		<Size>100</Size>
+		<MultiHit/>
+		<PassesCover/>
+	</Projectile>
+	<NumProjectiles>1</NumProjectiles>
+	<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="116" amount="75">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="22" amount="-5">IncrementStat</ActivateOnEquip>
+	<OldSound>arrowShoot</OldSound>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<Legendary/>
+	<ItemEffect>237</ItemEffect>
+</Object>
+<Object type="0xce4" id="The Scorched Artifact">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x123</Index>
+	</Texture>
+	<SlotType>12</SlotType>
+	<Description>. . .</Description>
+	<Sound>spell/light_heal</Sound>
+	<ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="80">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="22" amount="8">IncrementStat</ActivateOnEquip>
+	<Usable/>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<MpCost>110</MpCost>
+	<Cooldown>1.5</Cooldown>
+	<Activate effect="Healing" duration="4.5" range="5.5" color="0xF93E13">ConditionEffectAura</Activate>
+	<Activate effect="Damaging" duration="4.5" range="5.5" hideParticles="true">ConditionEffectAura</Activate>
+	<Activate stat="26" amount="20" duration="4.5" range="5.5" noStack="true" hideParticles="true">StatBoostAura</Activate>
+	<Activate stat="20" amount="15" duration="3" noStack="true">StatBoostSelf</Activate>
+	<Legendary/>
+	<ItemEffect>236</ItemEffect>
+</Object>
+<Object type="0xce3" id="Hurricane Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x11a</Index>
+	</Texture>
+	<Flying/>
+	<Ally/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<MinionTag/>
+	<NoFollow/>
+	<Size>135</Size>
+	<ShadowSize>0</ShadowSize>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x11a</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x11b</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x11c</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x11d</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x11e</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x120</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x121</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x122</Index></Texture></Frame>
+	</Animation>
+</Object>
+<Object type="0xce2" id="Living Root Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>lofiObjBig</File>
+		<Index>0xaa7</Index>
+	</Texture>
+	<Animation prob="1.0" period="0" spawnAnimation="true">
+		<Frame time="0.15"><Texture><File>lofiObjBig</File><Index>0xa9d</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>lofiObjBig</File><Index>0xa9e</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>lofiObjBig</File><Index>0xa9f</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>lofiObjBig</File><Index>0xaa7</Index></Texture></Frame>
+	</Animation>
+	<Size>100</Size>
+	<ShadowSize>50</ShadowSize>
+	<MaxHitPoints>3000</MaxHitPoints>
+	<Ally/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<MinionTag/>
+	<NoFollow/>
+</Object>
+<Object type="0xce1" id="Laevatein Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>lofiObjBig</File>
+		<Index>0xaad</Index>
+	</Texture>
+	<Flying/>
+	<Ally/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<MinionTag/>
+	<AbilityTag/>
+	<DontInterpolate/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+	<FollowDistance>20</FollowDistance>
+	<!-- Float -->
+	<AltTexture id="1"><Texture><File>lofiObjBig</File><Index>0xaad</Index></Texture></AltTexture>
+	<AltTexture id="2"><Texture><File>lofiObjBig</File><Index>0xaae</Index></Texture></AltTexture>
+	<AltTexture id="3"><Texture><File>lofiObjBig</File><Index>0xaaf</Index></Texture></AltTexture>
+	<AltTexture id="4"><Texture><File>lofiObjBig</File><Index>0xab0</Index></Texture></AltTexture>
+	<!-- Spin -->
+	<AltTexture id="5"><Texture><File>lofiObjBig</File><Index>0xab1</Index></Texture></AltTexture>
+	<AltTexture id="6"><Texture><File>lofiObjBig</File><Index>0xab2</Index></Texture></AltTexture>
+	<AltTexture id="7"><Texture><File>lofiObjBig</File><Index>0xab3</Index></Texture></AltTexture>
+	<AltTexture id="8"><Texture><File>lofiObjBig</File><Index>0xab4</Index></Texture></AltTexture>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.125"><Texture><File>lofiObjBig</File><Index>0xab1</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>lofiObjBig</File><Index>0xab2</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>lofiObjBig</File><Index>0xab3</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>lofiObjBig</File><Index>0xab4</Index></Texture></Frame>
+	</Animation>
+	<Projectile id="0">
+		<ObjectId>Aben Slash</ObjectId>
+		<Damage>500</Damage>
+		<Speed>120</Speed>
+		<Size>100</Size>
+		<LifetimeMS>500</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+	</Projectile>
+</Object>
+<Object type="0xce0" id="Withering Flame Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x115</Index>
+	</Texture>
+	<Flying/>
+	<Ally/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<NotTargetable/>
+	<MinionTag/>
+	<NoFollow/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x115</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x116</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x117</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x118</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x119</Index></Texture></Frame>
+	</Animation>
+</Object>
+<Object type="0xcdf" id="Burning Corpse Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x112</Index>
+	</Texture>
+	<Ally/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<NoFollow/>
+	<Size>115</Size>
+	<ShadowSize>0</ShadowSize>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x112</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x113</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24</File><Index>0x114</Index></Texture></Frame>
+	</Animation>
+</Object>
+<Object type="0xcd9" id="Molten Axe">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x131</Index>
+	</Texture>
+	<Rotation>100</Rotation>
+</Object>
+<Object type="0xcd8" id="Molten Spear">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x130</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0xcd7" id="Molten Sword">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x111</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0xcd6" id="Drowned Soul Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>customChars8x8</File>
+		<Index>141</Index>
+	</AnimatedTexture>
+	<Ally/>
+	<Flying/>
+	<MinionTag/>
+	<AbilityTag/>
+	<NotTargetable/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<FollowDistance>12</FollowDistance>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+</Object>
+<Object type="0xcd3" id="Hellfire Tornado Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x12c</Index>
+	</Texture>
+	<Ally/>
+	<Flying/>
+	<MinionTag/>
+	<NotTargetable/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<FollowDistance>16</FollowDistance>
+	<Size>125</Size>
+	<ShadowSize>0</ShadowSize>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x12c</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x12d</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x12e</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0x12f</Index></Texture></Frame>
+	</Animation>
+</Object>
+<Object type="0xcd2" id="Rain Cloud Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>customChars8x8</File>
+		<Index>140</Index>
+	</AnimatedTexture>
+	<Ally/>
+	<Flying/>
+	<MinionTag/>
+	<NotTargetable/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<NoFollow/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+	<Projectile id="0">
+		<ObjectId>Invisible</ObjectId>
+		<Damage>0</Damage>
+		<Speed>0</Speed>
+		<LifetimeMS>0</LifetimeMS>
+		<Size>0</Size>
+	</Projectile>
+</Object>
+<Object type="0xcd1" id="Swarm Demon Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>customChars8x8</File>
+		<Index>139</Index>
+	</AnimatedTexture>
+	<Ally/>
+	<Flying/>
+	<MinionTag/>
+	<NotTargetable/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<FollowDistance>12</FollowDistance>
+	<Size>75</Size>
+	<ShadowSize>40</ShadowSize>
+	<Projectile id="0">
+		<ObjectId>Invisible</ObjectId>
+		<Damage>0</Damage>
+		<Speed>0</Speed>
+		<LifetimeMS>0</LifetimeMS>
+		<Size>0</Size>
+	</Projectile>
+</Object>
+<Object type="0xcce" id="Firefly Small Bolt">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x12b</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0xcc5" id="Aid Firefly Ally">
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>customChars8x8</File>
+		<Index>138</Index>
+	</AnimatedTexture>
+	<Ally/>
+	<Flying/>
+	<DontInterpolate/>
+	<MinionTag/>
+	<NotTargetable/>
+	<Invincible/>
+	<AllDebuffsImmune/>
+	<Size>80</Size>
+	<ShadowSize>0</ShadowSize>
+</Object>
+<Object type="0x9a8" id="Code of the Universe">
+	<TransformResult>Soul of Asclepius</TransformResult>
+	<Transformed/>
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x11f</Index>
+	</Texture>
+	<SlotType>4</SlotType>
+	<Description>Book made of transcendent fabric, almost unreal to the touch. The pages are filled incomprehensible words, and any attempt to make sense of it is pointless.</Description>
+	<Sound>spell/major_heal</Sound>
+	<Usable/>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+	<MpCost>150</MpCost>
+	<Activate amount="175" range="7" maxWisMod="300" noWisMod="range" useWisMod="true" hideParticles="true">HealNova</Activate>
+	<Activate effect="Armored" duration="4" range="7" noWisMod="range" useWisMod="true" color="0xF418DE">ConditionEffectAura</Activate>
+	<Activate stat="21" amount="15" duration="4" range="7" noStack="true" useWisMod="true" noWisMod="amount, range" hideParticles="true">StatBoostAura</Activate>
+	<Activate>RemoveNegativeConditionsSelf</Activate>
+	<Legendary/>
+	<ItemEffect>124</ItemEffect>
+	<AwakenedEffects>125</AwakenedEffects>
+	<FusionInteraction/>
+	<MaxEssences>3</MaxEssences>
+	<EssenceBoost amount="-5">MpCost</EssenceBoost>
+	<EssenceBoost stat="20" amount="3">IncrementStat</EssenceBoost>
+</Object>
+
+<!-- Pumpkin Queen Reskins START -->
+<Object type="0x9a7" id="Inferno Meteor">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x10b</Index>
+	</Texture>
+</Object>
+<Object type="0x9a6" id="Leaf Crown">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x10a</Index>
+	</Texture>
+	<SlotType>9</SlotType>
+	<ReskinOf>The Forgotten Crown</ReskinOf>
+	<ExtraTooltipData>
+		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
+	</ExtraTooltipData>
+	<Description>You feel one with nature. You feel that it is there to protect you.</Description>
+	<ActivateOnEquip stat="28" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="180">IncrementStat</ActivateOnEquip>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<Legendary/>
+	<HalloweenLegendary/>
+	<ItemEffect>162</ItemEffect>
+	<AwakenedEffects>163</AwakenedEffects>
+	<FusionInteraction/>
+	<MaxEssences>4</MaxEssences>
+	<EssenceBoost stat="0" amount="5">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="20" amount="1">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
+</Object>
+<Object type="0x9a5" id="Pumpkin Proj">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x109</Index>
+	</Texture>
+	<Rotation>140</Rotation>
+</Object>
+<Object type="0x9a4" id="Storm of Pumpkins">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x108</Index>
+	</Texture>
+	<SlotType>11</SlotType>
+	<ReskinOf>Tablet of the King's Avatar</ReskinOf>
+	<ExtraTooltipData>
+		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
+	</ExtraTooltipData>
+	<Description>The most powerful spell from her arsenal.</Description>
+	<Sound>spell/magic_nova</Sound>
+	<Projectile>
+		<ObjectId>Pumpkin Proj</ObjectId>
+		<Speed>60</Speed>
+		<MinDamage>1000</MinDamage>
+		<MaxDamage>1500</MaxDamage>
+		<LifetimeMS>500</LifetimeMS>
+		<Boomerang/>
+		<MultiHit/>
+		<FaceDir/>
+	</Projectile>
+	<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="95">IncrementStat</ActivateOnEquip>
+	<Usable/>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<MpCost>150</MpCost>
+	<Legendary/>
+	<HalloweenLegendary/>
+	<ItemEffect>203</ItemEffect>
+	<Activate amount="5">BulletNova</Activate>
+</Object>
+<Object type="0x9a3" id="Grass Slash">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x107</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0x9a2" id="Blade of Grass">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x106</Index>
+	</Texture>
+	<SlotType>24</SlotType>
+	<ReskinOf>Executioner's Guillotine</ReskinOf>
+	<ExtraTooltipData>
+		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
+	</ExtraTooltipData>
+	<Description>Blade very deceiving in its nature, slicing heads of those careless.</Description>
+	<RateOfFire>0.65</RateOfFire>
+	<Sound>weapon/long_sword</Sound>
+	<Projectile>
+		<ObjectId>Grass Slash</ObjectId>
+		<Speed>156</Speed>
+		<MinDamage>450</MinDamage>
+		<MaxDamage>560</MaxDamage>
+		<LifetimeMS>343</LifetimeMS>
+		<MultiHit/>
+	</Projectile>
+	<ActivateOnEquip stat="22" amount="8">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="138" amount="150">IncrementStat</ActivateOnEquip>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<OldSound>bladeSwing</OldSound>
+	<Legendary/>
+	<HalloweenLegendary/>
+	<ItemEffect>65</ItemEffect>
+</Object>
+<Object type="0x9a1" id="Pumpkin Knight Ally">
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xa7</Index>
+	</Texture>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0xa7</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0xa8</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0xa9</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0xaa</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0xab</Index></Texture></Frame>
+		<Frame time="0.1"><Texture><File>halloween24</File><Index>0xac</Index></Texture></Frame>
+	</Animation>
+	<NoFollow/>
+	<NoMinimap/>
+	<AllDebuffsImmune/>
+	<Size>90</Size>
+	<ShadowSize>45</ShadowSize>
+</Object>
+<Object type="0x9a0" id="Harp Flowers">
+	<Class>Projectile</Class>
+	<RandomTexture>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0x103</Index>
+		</Texture>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0x104</Index>
+		</Texture>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0x105</Index>
+		</Texture>
+	</RandomTexture>
+	<Rotation>90</Rotation>
+</Object>
+<Object type="0x99f" id="Budding Harp">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x102</Index>
+	</Texture>
+	<SlotType>3</SlotType>
+	<ReskinOf>Eye of the Feral</ReskinOf>
+	<ExtraTooltipData>
+		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
+	</ExtraTooltipData>
+	<Description>Playing with the strings makes a beautiful melody that only Mother Nature knows.</Description>
+	<RateOfFire>1.33</RateOfFire>
+	<Projectile>
+		<ObjectId>Harp Flowers</ObjectId>
+		<Speed>150</Speed>
+		<MinDamage>60</MinDamage>
+		<MaxDamage>70</MaxDamage>
+		<LifetimeMS>500</LifetimeMS>
+		<Size>80</Size>
+		<Amplitude>0.5</Amplitude>
+		<Frequency>0.54</Frequency>
+		<MultiHit/>
+		<ArmorPiercing/>
+	</Projectile>
+	<NumProjectiles>3</NumProjectiles>
+	<ArcGap>3</ArcGap>
+	<OldSound>arrowShoot</OldSound>
+	<FameBonus>7</FameBonus>
+	<BagType>10</BagType>
+	<Legendary/>
+	<HalloweenLegendary/>
+	<ItemEffect>83</ItemEffect>
+	<AwakenedEffects>84</AwakenedEffects>
+	<FusionInteraction/>
+	<MaxEssences>5</MaxEssences>
+	<EssenceBoost amount="0.04">Damage</EssenceBoost>
+	<EssenceBoost stat="20" amount="1">IncrementStat</EssenceBoost>
+</Object>
+<Object type="0x99e" id="Caduceus Crystal">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x101</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0x99d" id="Caduceus of the Queen">
+	<Class>Equipment</Class>
+	<Item/>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x100</Index>
+	</Texture>
+	<SlotType>17</SlotType>
+	<ReskinOf>Hell's Inferno</ReskinOf>
+	<ExtraTooltipData>
+		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
+	</ExtraTooltipData>
+	<Description>Staff used by the Pumpkin Queen to smite down pesky candy thieves.</Description>
+	<RateOfFire>0.75</RateOfFire>
+	<Sound>weapon/fire_wand</Sound>
+	<Projectile>
+		<ObjectId>Caduceus Crystal</ObjectId>
+		<Speed>200</Speed>
+		<MinDamage>145</MinDamage>
+		<MaxDamage>180</MaxDamage>
+		<LifetimeMS>412.5</LifetimeMS>
+		<ArmorPiercing/>
+		<Amplitude>0.35</Amplitude>
+		<Frequency>1</Frequency>
+	</Projectile>
+	<BagType>10</BagType>
+	<FameBonus>7</FameBonus>
+	<NumProjectiles>2</NumProjectiles>
+	<OldSound>magicShoot</OldSound>
+	<Legendary/>
+	<HalloweenLegendary/>
+	<ItemEffect>96</ItemEffect>
+	<AwakenedEffects>97</AwakenedEffects>
+	<FusionInteraction/>
+	<MaxEssences>5</MaxEssences>
+	<EssenceBoost amount="0.03">RateOfFire</EssenceBoost>
+</Object>
+<!-- Pumpkin Queen Reskins END -->
+
+<Object type="0x99c" id="Queen's Palace Portal">
+	<DisplayId>Queen's Palace</DisplayId>
+	<Class>Portal</Class>
+	<IntergamePortal/>
+	<DungeonName>Queen's Palace</DungeonName>
+	<Texture>
+		<File>halloween24_16</File>
+		<Index>0x44</Index>
+	</Texture>
+	<RealSize>110</RealSize>
+	<ShadowSize>0</ShadowSize>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.15"><Texture><File>halloween24_16</File><Index>0x44</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24_16</File><Index>0x45</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24_16</File><Index>0x46</Index></Texture></Frame>
+		<Frame time="0.15"><Texture><File>halloween24_16</File><Index>0x47</Index></Texture></Frame>
+	</Animation>
+</Object>
+<Object type="0x99b" id="Pumpkin Queen Knight AFK">
+	<Enemy/>
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xa7</Index>
+	</Texture>
+	<AllDebuffsImmune/>
+	<Invincible/>
+	<BypassNoWalk/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+</Object>
+<Object type="0x999" id="Queen Pumpkin Wall">
+	<Class>Wall</Class>
+	<Texture><File>halloween24</File><Index>0xee</Index></Texture>
+	<Top>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0xef</Index>
+		</Texture>
+	</Top>
+	<Static/>
+	<FullOccupy/>
+	<EnemyOccupySquare/>
+</Object>
+<Object type="0x998" id="Queen Purple Banner Wall">
+	<Class>Wall</Class>
+	<Texture><File>halloween24</File><Index>0xfd</Index></Texture>
+	<Top>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0xec</Index>
+		</Texture>
+	</Top>
+	<Static/>
+	<FullOccupy/>
+	<EnemyOccupySquare/>
+</Object>
+<Object type="0x98f" id="Queen Purple Window Wall">
+	<Class>Wall</Class>
+	<Texture><File>halloween24</File><Index>0xed</Index></Texture>
+	<Top>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0xec</Index>
+		</Texture>
+	</Top>
+	<Static/>
+	<FullOccupy/>
+	<EnemyOccupySquare/>
+</Object>
+<Object type="0x98e" id="Queen Purple Column Wall">
+	<Class>Wall</Class>
+	<Texture><File>halloween24</File><Index>0xeb</Index></Texture>
+	<Top>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0xec</Index>
+		</Texture>
+	</Top>
+	<Static/>
+	<FullOccupy/>
+	<EnemyOccupySquare/>
+</Object>
+<Object type="0x98d" id="Queen Purple Wall">
+	<Class>Wall</Class>
+	<RandomTexture>
+		<Texture><File>halloween24</File><Index>0xe5</Index></Texture>
+		<Texture><File>halloween24</File><Index>0xe6</Index></Texture>
+		<Texture><File>halloween24</File><Index>0xe7</Index></Texture>
+		<Texture><File>halloween24</File><Index>0xe8</Index></Texture>
+		<Texture><File>halloween24</File><Index>0xe9</Index></Texture>
+		<Texture><File>halloween24</File><Index>0xea</Index></Texture>
+	</RandomTexture>
+	<Top>
+		<Texture>
+			<File>halloween24</File>
+			<Index>0xec</Index>
+		</Texture>
+	</Top>
+	<Static/>
+	<FullOccupy/>
+	<EnemyOccupySquare/>
+</Object>
+<Object type="0x98c" id="Queen Dark Rug Circle Down">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xf5</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x98b" id="Queen Dark Rug Circle Up">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xf4</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x98a" id="Queen Green Rug Circle Down">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xfb</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x989" id="Queen Green Rug Circle Up">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xfa</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x988" id="Queen Rug Drawing 5">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xe4</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x987" id="Queen Rug Drawing 4">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xe3</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x986" id="Queen Rug Drawing 3">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xe2</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x985" id="Queen Rug Drawing 2">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xe1</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x984" id="Queen Rug Drawing 1">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xe0</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x97f" id="Queen Rug Circle Down">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xdd</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x97e" id="Queen Rug Circle Up">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xdc</Index>
+	</Texture>
+	<Static/>
+	<DrawOnGround/>
+</Object>
+<Object type="0x97b" id="Pumpkin Torch">
+	<Class>GameObject</Class>
+	<Texture>
+		<File>halloween24_16</File>
+		<Index>0x3e</Index>
+	</Texture>
+	<Animation prob="1.0" period="0.0">
+		<Frame time="0.125"><Texture><File>halloween24_16</File><Index>0x3e</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>halloween24_16</File><Index>0x3f</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>halloween24_16</File><Index>0x40</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>halloween24_16</File><Index>0x41</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>halloween24_16</File><Index>0x42</Index></Texture></Frame>
+		<Frame time="0.125"><Texture><File>halloween24_16</File><Index>0x43</Index></Texture></Frame>
+	</Animation>
+	<Size>120</Size>
+	<ShadowSize>40</ShadowSize>
+	<Static/>
+</Object>
+<Object type="0x97d" id="Queen Purple Spinner">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xdf</Index>
+	</Texture>
+	<Rotation>110</Rotation>
+</Object>
+<Object type="0x97c" id="Queen Green Spinner">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xde</Index>
+	</Texture>
+	<Rotation>110</Rotation>
+</Object>
+<Object type="0x97a" id="Pumpkin Queen Knight Train">
+	<DisplayId>Pumpkin Queen</DisplayId>
+	<Enemy/>
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xa7</Index>
+	</Texture>
+	<AltTexture id="1"><Texture><File>halloween24</File><Index>0xa7</Index></Texture></AltTexture>
+	<AltTexture id="2"><Texture><File>halloween24</File><Index>0xa8</Index></Texture></AltTexture>
+	<AltTexture id="3"><Texture><File>halloween24</File><Index>0xa9</Index></Texture></AltTexture>
+	<AltTexture id="4"><Texture><File>halloween24</File><Index>0xaa</Index></Texture></AltTexture>
+	<AltTexture id="5"><Texture><File>halloween24</File><Index>0xab</Index></Texture></AltTexture>
+	<AltTexture id="6"><Texture><File>halloween24</File><Index>0xac</Index></Texture></AltTexture>
+	<AltTexture id="7"><Texture><File>halloween24</File><Index>0xa7</Index></Texture></AltTexture>
+	<AllDebuffsImmune/>
+	<Invincible/>
+	<BypassNoWalk/>
+	<DontInterpolate/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+	
+	<Projectile id="0">
+		<ObjectId>Queen Orange Spear</ObjectId>
+		<Damage>160</Damage>
+		<Speed>70</Speed>
+		<LifetimeMS>2400</LifetimeMS>
+		<Size>125</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<SpeedClamp>-70</SpeedClamp>
+		<AccelerationDelay>500</AccelerationDelay>
+		<Acceleration>-100</Acceleration>
+	</Projectile>
+	<Projectile id="1">
+		<ObjectId>Queen Orange Spear</ObjectId>
+		<Damage>160</Damage>
+		<Speed>50</Speed>
+		<LifetimeMS>2400</LifetimeMS>
+		<Size>125</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<SpeedClamp>-50</SpeedClamp>
+		<AccelerationDelay>500</AccelerationDelay>
+		<Acceleration>-71</Acceleration>
+	</Projectile>
+	<Projectile id="2">
+		<ObjectId>Queen Orange Spear</ObjectId>
+		<Damage>140</Damage>
+		<Speed>30</Speed>
+		<LifetimeMS>2400</LifetimeMS>
+		<Size>100</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<SpeedClamp>-30</SpeedClamp>
+		<AccelerationDelay>500</AccelerationDelay>
+		<Acceleration>-43</Acceleration>
+	</Projectile>
+
+</Object>
+<Object type="0x977" id="Pumpkin Queen Knight">
+	<DisplayId>Pumpkin Queen</DisplayId>
+	<Enemy/>
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xa7</Index>
+	</Texture>
+	<AltTexture id="1"><Texture><File>halloween24</File><Index>0xa7</Index></Texture></AltTexture>
+	<AltTexture id="2"><Texture><File>halloween24</File><Index>0xa8</Index></Texture></AltTexture>
+	<AltTexture id="3"><Texture><File>halloween24</File><Index>0xa9</Index></Texture></AltTexture>
+	<AltTexture id="4"><Texture><File>halloween24</File><Index>0xaa</Index></Texture></AltTexture>
+	<AltTexture id="5"><Texture><File>halloween24</File><Index>0xab</Index></Texture></AltTexture>
+	<AltTexture id="6"><Texture><File>halloween24</File><Index>0xac</Index></Texture></AltTexture>
+	<AllDebuffsImmune/>
+	<Invincible/>
+	<NoMiniMap/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+	
+	<Projectile id="0">
+		<ObjectId>Queen Orange Spear</ObjectId>
+		<Damage>160</Damage>
+		<Speed>50</Speed>
+		<LifetimeMS>2400</LifetimeMS>
+		<Size>125</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<SpeedClamp>-50</SpeedClamp>
+		<AccelerationDelay>500</AccelerationDelay>
+		<Acceleration>-71</Acceleration>
+		<FaceDir/>
+	</Projectile>
+	<Projectile id="1">
+		<ObjectId>Queen Orange Spear</ObjectId>
+		<Damage>140</Damage>
+		<Speed>30</Speed>
+		<LifetimeMS>2400</LifetimeMS>
+		<Size>100</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<SpeedClamp>-30</SpeedClamp>
+		<AccelerationDelay>500</AccelerationDelay>
+		<Acceleration>-43</Acceleration>
+		<FaceDir/>
+	</Projectile>
+
+</Object>
+<Object type="0x974" id="Queen Green Flame">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xbf</Index>
+	</Texture>
+	<Rotation>110</Rotation>
+</Object>
+<Object type="0x973" id="Queen Orange Spear">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0x9f</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0x971" id="Queen Orange Trail Bolt">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xaf</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0x96f" id="Queen Orange Spinner">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xae</Index>
+	</Texture>
+	<Rotation>110</Rotation>
+</Object>
+<Object type="0x96e" id="Queen Orange Bolt">
+	<Class>Projectile</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xad</Index>
+	</Texture>
+	<AngleCorrection>1</AngleCorrection>
+</Object>
+<Object type="0x96d" id="Pumpkin Queen Turret">
+	<DisplayId>Pumpkin Queen</DisplayId>
+	<Enemy/>
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xcf</Index>
+	</Texture>
+	<AltTexture id="1"><AnimatedTexture><File>customChars8x8</File><Index>137</Index></AnimatedTexture></AltTexture>
+	<AllDebuffsImmune/>
+	<Invincible/>
+	<NoMiniMap/>
+	<AlwaysOnMiniMap/>
+	<AlwaysTicked/>
+	<Size>100</Size>
+	<ShadowSize>0</ShadowSize>
+	
+	<Projectile id="0">
+		<ObjectId>Queen Orange Bolt</ObjectId>
+		<Damage>150</Damage>
+		<Speed>75</Speed>
+		<LifetimeMS>2555</LifetimeMS>
+		<Size>110</Size>
+		<MultiHit/>
+		<PassesCover/>
+	</Projectile>
+
+</Object>
+<Object type="0x96c" id="Pumpkin Queen Turret Helper">
+	<DisplayId>Pumpkin Queen</DisplayId>
+	<Enemy/>
+	<Class>Character</Class>
+	<Texture>
+		<File>halloween24</File>
+		<Index>0xcf</Index>
+	</Texture>
+	<AllDebuffsImmune/>
+	<Invincible/>
+	<NoMiniMap/>
+	<Size>0</Size>
+
+</Object>
+<Object type="0x96b" id="Pumpkin Queen Center">
+	<DisplayId>Pumpkin Queen</DisplayId>
+	<Enemy/>
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>halloween24_chars16x16</File>
+		<Index>5</Index>
+	</AnimatedTexture>
+	<AllDebuffsImmune/>
+	<Invincible/>
+	<NoMiniMap/>
+	<Size>0</Size>
+
+</Object>
+<Object type="0x96a" id="Pumpkin Queen">
+	<DisplayId>Pumpkin Queen</DisplayId>
+	<Enemy/>
+	<Class>Character</Class>
+	<AnimatedTexture>
+		<File>halloween24_chars16x16</File>
+		<Index>5</Index>
+	</AnimatedTexture>
+	<ParalyzeImmune/>
+	<DazedImmune/>
+	<StunImmune/>
+	<StasisImmune/>
+	<BypassNoWalk/>
+	<IgnoresDecoys/>
+	<Size>140</Size>
+	<MaxHitPoints>200000</MaxHitPoints>
+	<Defense>80</Defense>
+	<Exp>35000</Exp>
+	<Quest/>
+	<ShadowSize>0</ShadowSize>
+	<DungeonComplete/>
+	<FinalBoss/>
+	
+	<Projectile id="0">
+		<ObjectId>Pumpkin Fire Vortex</ObjectId>
+		<Damage>200</Damage>
+		<Speed>60</Speed>
+		<LifetimeMS>2120</LifetimeMS>
+		<MultiHit/>
+		<Size>170</Size>
+		<Explode numProjectiles="1" arcGap="0" coolDown="300" rotateAngle="0">
+			<Projectile>
+				<ObjectId>Pumpkin Fire Spinner</ObjectId>
+				<Damage>125</Damage>
+				<Speed>0</Speed>
+				<LifetimeMS>8000</LifetimeMS>
+				<MultiHit/>
+				<Size>110</Size>
+				<ConditionEffect duration="2">Bleeding</ConditionEffect>
+			</Projectile>
+		</Explode>
+	</Projectile>
+	<Projectile id="1">
+		<ObjectId>Queen Green Flame</ObjectId>
+		<Damage>160</Damage>
+		<Speed>60</Speed>
+		<LifetimeMS>5000</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Frequency>0.7</Frequency>
+		<Amplitude>2.0</Amplitude>
+		<Acceleration>-50</Acceleration>
+		<SpeedClamp>23</SpeedClamp>
+		<AccelerationDelay>100</AccelerationDelay>
+		<Size>140</Size>
+		<Phase>0</Phase>
+	</Projectile>
+	<Projectile id="2">
+		<ObjectId>Queen Green Flame</ObjectId>
+		<Damage>160</Damage>
+		<Speed>60</Speed>
+		<LifetimeMS>5400</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Frequency>0.7</Frequency>
+		<Amplitude>2.0</Amplitude>
+		<Acceleration>-50</Acceleration>
+		<SpeedClamp>23</SpeedClamp>
+		<AccelerationDelay>100</AccelerationDelay>
+		<Size>140</Size>
+		<Phase>1</Phase>
+		<MoveDelay>400</MoveDelay>
+	</Projectile>
+	<Projectile id="3">
+		<ObjectId>Queen Green Flame</ObjectId>
+		<Damage>160</Damage>
+		<Speed>60</Speed>
+		<LifetimeMS>5800</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Frequency>0.7</Frequency>
+		<Amplitude>2.0</Amplitude>
+		<Acceleration>-50</Acceleration>
+		<SpeedClamp>23</SpeedClamp>
+		<AccelerationDelay>100</AccelerationDelay>
+		<Size>140</Size>
+		<Phase>0</Phase>
+		<MoveDelay>800</MoveDelay>
+	</Projectile>
+	<Projectile id="4">
+		<ObjectId>Queen Green Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>10</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Frequency>1</Frequency>
+		<Amplitude>1.5</Amplitude>
+		<Acceleration>50</Acceleration>
+		<SpeedClamp>90</SpeedClamp>
+		<AccelerationDelay>600</AccelerationDelay>
+		<Size>140</Size>
+		<FaceDir/>
+	</Projectile>
+	<Projectile id="5">
+		<ObjectId>Queen Orange Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>10</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Frequency>1</Frequency>
+		<Amplitude>1.5</Amplitude>
+		<Acceleration>50</Acceleration>
+		<SpeedClamp>90</SpeedClamp>
+		<AccelerationDelay>600</AccelerationDelay>
+		<Size>140</Size>
+		<FaceDir/>
+	</Projectile>
+	<Projectile id="6">
+		<ObjectId>Queen Purple Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>10</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<Frequency>1</Frequency>
+		<Amplitude>1.5</Amplitude>
+		<Acceleration>50</Acceleration>
+		<SpeedClamp>90</SpeedClamp>
+		<AccelerationDelay>600</AccelerationDelay>
+		<Size>140</Size>
+		<FaceDir/>
+	</Projectile>
+	<Projectile id="7">
+		<ObjectId>Queen Green Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>25</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<Size>140</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<Amplitude>2</Amplitude>
+		<Frequency>0.7</Frequency>
+		<Phase>0</Phase>
+	</Projectile>
+	<Projectile id="8">
+		<ObjectId>Queen Orange Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>40</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<Size>140</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<Amplitude>2</Amplitude>
+		<Frequency>0.7</Frequency>
+		<Phase>0</Phase>
+	</Projectile>
+	<Projectile id="9">
+		<ObjectId>Queen Purple Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>60</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<Size>140</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<Amplitude>2</Amplitude>
+		<Frequency>0.7</Frequency>
+		<Phase>0</Phase>
+	</Projectile>
+	<Projectile id="10">
+		<ObjectId>Queen Green Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>25</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<Size>140</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<Amplitude>2</Amplitude>
+		<Frequency>0.7</Frequency>
+		<Phase>1</Phase>
+	</Projectile>
+	<Projectile id="11">
+		<ObjectId>Queen Orange Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>40</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<Size>140</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<Amplitude>2</Amplitude>
+		<Frequency>0.7</Frequency>
+		<Phase>1</Phase>
+	</Projectile>
+	<Projectile id="12">
+		<ObjectId>Queen Purple Spinner</ObjectId>
+		<Damage>160</Damage>
+		<Speed>60</Speed>
+		<LifetimeMS>3000</LifetimeMS>
+		<Size>140</Size>
+		<MultiHit/>
+		<ArmorPiercing/>
+		<PassesCover/>
+		<Amplitude>2</Amplitude>
+		<Frequency>0.7</Frequency>
+		<Phase>1</Phase>
+	</Projectile>
+
+</Object>
 <Object type="0x969" id="Halloween King Door Lava Maker">
 	<Class>Character</Class>
 	<StasisImmune/>
@@ -226,7 +1719,7 @@ Item Effects:
 		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
 	</ExtraTooltipData>
 	<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
@@ -239,7 +1732,6 @@ Item Effects:
 	<MaxEssences>5</MaxEssences>
 	<EssenceBoost customAmount="100" customName="Rolling Damage">Custom</EssenceBoost>
 	<EssenceBoost customAmount="100" customName="Flung Snowball Damage">Custom</EssenceBoost>
-	<EssenceBoost stat="0" amount="6">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="27" amount="4">IncrementStat</EssenceBoost>
 </Object>
@@ -274,7 +1766,7 @@ Item Effects:
 		<Index>0x81</Index>
 	</Texture>
 	<SlotType>23</SlotType>
-	<Description>Channeling the lifeblood of the forest through this branch creates blinding flares. Also can double as a broomstick.</Description>
+	<Description>Thrown into the Tempest, this candlestick consumed many souls of the damned, and now it can burn them away to channel powerful storms.</Description>
 	<ReskinOf>Sprig of Amber</ReskinOf>
 	<ExtraTooltipData>
 		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
@@ -283,9 +1775,9 @@ Item Effects:
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>180</MpCost>
-    <Activate totalDamage="0" maxTargets="5" condDuration="3" color="0xFF2679" statMod="22" statPerTarget="75" damagePerStat="35">Lightning</Activate>
-    <Activate totalDamage="2750" maxTargets="1" condDuration="3" color="0xF7AFFF" useWisMod="true">Lightning</Activate>
+	<MpCost>165</MpCost>
+    <Activate totalDamage="0" maxTargets="5" condDuration="3" color="0xFF2679" statMod="22" statPerTarget="75" damagePerStat="30">Lightning</Activate>
+    <Activate totalDamage="2350" maxTargets="1" condDuration="3" color="0xF7AFFF" useWisMod="true">Lightning</Activate>
 	<Legendary/>
 	<HalloweenLegendary/>
 	<ItemEffect>184</ItemEffect>
@@ -570,7 +2062,7 @@ Item Effects:
 	<FameBonus>8</FameBonus>
 	<Legendary/>
 	<HalloweenLegendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>235</ItemEffect>
 </Object>
 <Object type="0x8fa" id="Pumpkin Plate">
 	<Class>Equipment</Class>
@@ -606,7 +2098,7 @@ Item Effects:
 		<Index>0x6f</Index>
 	</Texture>
 	<SlotType>12</SlotType>
-	<Description>A crude wooden seal carved out of the flesh of the Withered God. Their spirit now resides within, vowing to burn the realm to ashes.</Description>
+	<Description>The spookiest carved pumpkin ever. Spook your enemies away!</Description>
 	<ReskinOf>Oath of Cinder</ReskinOf>
 	<ExtraTooltipData>
 		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
@@ -633,24 +2125,24 @@ Item Effects:
 		<Index>0x6e</Index>
 	</Texture>
 	<SlotType>21</SlotType>
-	<Description>Orb that holds ancient powers of hell, ready to be released upon the strongest of magic casters.</Description>
+	<Description>A pumpkin so hot, it will cause anyone to have an unforgettable Halloween!</Description>
 	<ReskinOf>Hellfire Orb</ReskinOf>
 	<ExtraTooltipData>
 		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
 	</ExtraTooltipData>
 	<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>110</MpCost>
-	<Activate totalDamage="2000" radius="7.25" center="player" hideParticles="true">DamageBlast</Activate>
-	<Activate effect="Damaging" duration="3.5">ConditionEffectSelf</Activate>
-	<Activate stat="20" amount="20" duration="3.5" noStack="true">StatBoostSelf</Activate>
-	<Activate type="FlameNova" color="0xFF5619" color2="0x159642" radius="7.25" center="player">ShowEffect</Activate>
+	<MpCost>100</MpCost>
+	<Activate totalDamage="2000" radius="7" center="player" hideParticles="true">DamageBlast</Activate>
+	<Activate effect="Damaging" duration="5">ConditionEffectSelf</Activate>
+	<Activate type="FlameNova" color="0xFF5619" color2="0x159642" radius="7" center="player">ShowEffect</Activate>
 	<Legendary/>
 	<HalloweenLegendary/>
-	<ItemEffect>7</ItemEffect>
+	<ItemEffect>230</ItemEffect>
 </Object>
 <Object type="0x8f7" id="Pumpkin Slayer Slash">
 	<Class>Projectile</Class>
@@ -668,7 +2160,7 @@ Item Effects:
 		<Index>0x6c</Index>
 	</Texture>
 	<SlotType>1</SlotType>
-	<Description>A sword with an impossibly sharp edge. It has been designed with holy magic to slash like no other blade.</Description>
+	<Description>A very sharp and heavy sword completely covered in pumpkin juice.</Description>
 	<RateOfFire>1.0</RateOfFire>
 	<Sound>weapon/golden_bow</Sound>
 	<ReskinOf>Sword of the Colossus</ReskinOf>
@@ -782,7 +2274,7 @@ Item Effects:
 		<Index>0x67</Index>
 	</Texture>
 	<SlotType>9</SlotType>
-	<Description>Golden crown of a Lion Prince, wearing this crown fills you with immense might and makes you a great leader who can lead any army.</Description>
+	<Description>Wards off all of the blood-sucking critters! ...And humans too.</Description>
 	<ReskinOf>Crown of War</ReskinOf>
 	<ExtraTooltipData>
 		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
@@ -803,7 +2295,7 @@ Item Effects:
 		<Index>0x66</Index>
 	</Texture>
 	<SlotType>14</SlotType>
-	<Description>Evil robe that reminds you of Shatters and what lays in there.</Description>
+	<Description>Spook your friends with this one!</Description>
 	<ReskinOf>Forgotten Robe</ReskinOf>
 	<ExtraTooltipData>
 		<EffectInfo name="" description="Halloween 2024 Reskin" descriptionColor="0xFF6B00"/>
@@ -835,7 +2327,7 @@ Item Effects:
 		<Index>0x64</Index>
 	</Texture>
 	<SlotType>5</SlotType>
-	<Description>This massive shield was created for the wealthy and powerful Ogre kings as a sign of their unrivaled strength.</Description>
+	<Description>An immortal eye, sealed into a giant slab of stone as an eternal punishment.</Description>
 	<Sound>spell/fire_spray</Sound>
 	<ReskinOf>Shield of Ogmur</ReskinOf>
 	<ExtraTooltipData>
@@ -7645,18 +9137,23 @@ Item Effects:
 		<EffectInfo name="" description="Christmas 2023 Reskin" descriptionColor="0x98B8D1"/>
 	</ExtraTooltipData>
 	<ReskinOf>Siren's Skull</ReskinOf>
-	<ActivateOnEquip stat="0" amount="145">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="11">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+	<ExtraTooltipData>
+		<EffectInfo name="Drowned Soul" description="Chases the nearest enemy, zaps nearest enemy for 600 damage every second"/>
+	</ExtraTooltipData>
 	<Usable/>
 	<BagType>14</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>120</MpCost>
+	<MpCost>160</MpCost>
 	<Activate effect="Armored" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
 	<Activate effect="Berserk" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
-	<Activate radius="3.5" totalDamage="1000" condEffect="Weak" condDuration="2" heal="140" ignoreDef="75" wisDamageBase="75" useWisMod="true">VampireBlast</Activate>
+	<Activate objectId="Drowned Soul Ally" maxTargets="10" radius="1.0" amount="4" center="mouse" duration="3.5" statMod="27" durationPerStat="0.1">Ally</Activate>
+	<Cooldown>3</Cooldown>
 	<Legendary/>
 	<ChristmasLegendary/>
-	<ItemEffect>3</ItemEffect>
+	<ItemEffect>231</ItemEffect>
 </Object>
 <Object type="0x61b" id="Northern Bangle">
 	<Class>Equipment</Class>
@@ -7671,14 +9168,14 @@ Item Effects:
 		<EffectInfo name="" description="Christmas 2023 Reskin" descriptionColor="0x98B8D1"/>
 	</ExtraTooltipData>
 	<ReskinOf>Abaddon's Bracelet</ReskinOf>
-	<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="26" amount="80">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="50">IncrementStat</ActivateOnEquip>
 	<BagType>14</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
 	<ChristmasLegendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>234</ItemEffect>
 </Object>
 <Object type="0x621" id="Ornament Shard">
 	<Class>Projectile</Class>
@@ -7962,8 +9459,8 @@ Item Effects:
 <Object type="0x6bb" id="Krampus Slayer Arrow">
 	<Class>Projectile</Class>
 	<Texture>
-		<File>lofiObj7</File>
-		<Index>0x1d33</Index>
+		<File>halloween24</File>
+		<Index>0x13d</Index>
 	</Texture>
 	<AngleCorrection>1</AngleCorrection>
 </Object>
@@ -7980,16 +9477,16 @@ Item Effects:
 		<EffectInfo name="" description="Christmas 2023 Reskin" descriptionColor="0x98B8D1"/>
 	</ExtraTooltipData>
 	<ReskinOf>King's Crossbow</ReskinOf>
-	<RateOfFire>1.6</RateOfFire>
+	<RateOfFire>0.5</RateOfFire>
 	<Sound>weapon/heavy_crossbow</Sound>
 	<Projectile>
 		<ObjectId>Krampus Slayer Arrow</ObjectId>
 		<Speed>200</Speed>
-		<MinDamage>160</MinDamage>
-		<MaxDamage>225</MaxDamage>
+		<MinDamage>850</MinDamage>
+		<MaxDamage>950</MaxDamage>
 		<LifetimeMS>412.5</LifetimeMS>
 		<Size>100</Size>
-		<ArmorPiercing/>
+		<MultiHit/>
 		<PassesCover/>
 	</Projectile>
 	<NumProjectiles>1</NumProjectiles>
@@ -8275,12 +9772,11 @@ Item Effects:
 		<EffectInfo name="" description="Christmas 2023 Reskin" descriptionColor="0x98B8D1"/>
 	</ExtraTooltipData>
 	<ReskinOf>Robe of Bloodbath</ReskinOf>
-	<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="26">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="8">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="-5">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="20">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
 	<BagType>14</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
@@ -8289,10 +9785,10 @@ Item Effects:
 	<AwakenedEffects>136</AwakenedEffects>
 	<FusionInteraction/>
 	<MaxEssences>5</MaxEssences>
-	<EssenceBoost stat="0" amount="10">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="0" amount="5">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="20" amount="2">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="26" amount="1">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="28" amount="-1">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="26" amount="2">IncrementStat</EssenceBoost>
 </Object>
 <Object type="0x6ac" id="Grinch Slayer Prototype: Jester">
 	<Class>Equipment</Class>
@@ -8309,9 +9805,9 @@ Item Effects:
 	<ReskinOf>Harlequin Armor</ReskinOf>
 	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="3" amount="180">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
 	<FameBonus>7</FameBonus>
 	<BagType>14</BagType>
 	<Legendary/>
@@ -8321,8 +9817,8 @@ Item Effects:
 	<FusionInteraction/>
 	<MaxEssences>5</MaxEssences>
 	<EssenceBoost stat="3" amount="10">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="28" amount="2">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="27" amount="3">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="27" amount="2">IncrementStat</EssenceBoost>
 </Object>
 <Object type="0x6ab" id="Grinch Slayer Prototype: Enforcer">
 	<Class>Equipment</Class>
@@ -15893,13 +17389,13 @@ Item Effects:
 	<ReskinOf>Queen's Crown</ReskinOf>
 	<ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="3" amount="120">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="20" amount="18">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
 	<EasterLegendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>233</ItemEffect>
 </Object>
 <Object type="0x46c" id="Rabbit's Hide">
 	<Class>Equipment</Class>
@@ -16028,14 +17524,14 @@ Item Effects:
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<MpCost>100</MpCost>
-	<Activate totalDamage="1650" maxTargets="4" condEffect="ArmorBroken" condDuration="3" color="0xFF70A4" useWisMod="true">Lightning</Activate>
-	<Activate effect="Paralyzed" duration="2.1" range="2.5" color="0x5675FF" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+	<Activate totalDamage="1500" maxTargets="4" color="0xFF70A4" useWisMod="true">Lightning</Activate>
+	<Activate effect="Paralyzed" duration="2.5" range="2.5" color="0x5675FF" target="enemy" center="mouse" visualEffect="8">GenericActivate</Activate>
 	<Legendary/>
 	<EasterLegendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>229</ItemEffect>
 	<ActivateOnEquip stat="3" amount="120">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
 </Object>
 <Object type="0x466" id="Carrot of Wisdom">
 	<Class>Equipment</Class>
@@ -16116,22 +17612,17 @@ Item Effects:
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<ActivateOnEquip stat="0" amount="-50">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
-	<MpCost>110</MpCost>
-	<Activate range="6" amount="90" maxWisMod="300" noWisMod="range" useWisMod="true" hideParticles="true">
-		HealNova
-	</Activate>
-	<Activate effect="Healing" duration="3" range="6" color="0xFF783A" noWisMod="range" useWisMod="true">
-		ConditionEffectAura
-	</Activate>
+	<ActivateOnEquip stat="138" amount="100">IncrementStat</ActivateOnEquip>
+	<MpCost>90</MpCost>
+	<Activate effect="Healing" duration="3" range="6" color="0xFF783A" noWisMod="range" useWisMod="true">ConditionEffectAura</Activate>
 	<Activate effect="Damaging" duration="3" range="6" noWisMod="range" color="0xFF0000" hideParticles="true">ConditionEffectAura</Activate>
 	<Activate effect="Berserk" duration="3" hideParticles="true">ConditionEffectSelf</Activate>
 	<Legendary/>
 	<EasterLegendary/>
-	<ItemEffect>3</ItemEffect>
+	<Cooldown>3.5</Cooldown>
+	<ItemEffect>228</ItemEffect>
 </Object>
 <Object type="0x462" id="Bunny Slayer Slash">
 	<Class>Projectile</Class>
@@ -16319,20 +17810,20 @@ Item Effects:
 		<Index>0x1b6c</Index>
 	</Texture>
 	<SlotType>7</SlotType>
-	<Description>This massive armor crafted from body of Aben is emitting huge amount of strength to protect you.</Description>
+	<Description>A stone chassis, created to hold together the molten innards of Aben. The stone sheets of this armor are seeping with magic, after having been exposed to the Molten Guardian for centuries.</Description>
 	<ExtraTooltipData>
 		<EffectInfo descriptionColor="0xFFBFF6" description="Easter 2023 Reskin"/>
 	</ExtraTooltipData>
 	<ReskinOf>Aben's Stoneplate</ReskinOf>
-	<ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="25">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="17">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="35">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
 	<EasterLegendary/>
-	<ItemEffect>6</ItemEffect>
+	<ItemEffect>232</ItemEffect>
 </Object>
 <Object type="0x459" id="Bunny Crossbow Wave">
 	<Class>Projectile</Class>
@@ -29926,9 +31417,9 @@ Item Effects:
 		<Index>0x317</Index>
 	</Texture>
 	<SlotType>16</SlotType>
-	<Description>Handcrafted by the forest witch as a gift for her loyal guardian. It is adorned with both beautiful autumn leaves and created from the strongest wood around.</Description>
-	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="26" amount="6">IncrementStat</ActivateOnEquip>
+	<Description>A beautiful helm, bestowed upon you by the Heart of the Forest. It appears that Sylvia has finally perfected the Curse of Withering, turning a force of destruction into a living being.</Description>
+	<ActivateOnEquip stat="21" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="18">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
 	<Usable/>
 	<BagType>10</BagType>
@@ -29936,8 +31427,7 @@ Item Effects:
 	<MpCost>100</MpCost>
 	<Activate effect="Berserk" duration="4" range="6">ConditionEffectAura</Activate>
 	<Activate effect="Healing" duration="6" range="6" hideParticles="true">ConditionEffectAura</Activate>
-	<Activate amount="25" statMod="0" amountPerStat="0.2" maxAmount="300">Heal</Activate>
-	<Activate effect="Speedy" duration="6">ConditionEffectSelf</Activate>
+	<Activate amount="50" duration="3" statMod="26" amountPerStat="1">HealthOverTime</Activate>
 	<Cooldown>6</Cooldown>
 	<Legendary/>
 	<ItemEffect>55</ItemEffect>
@@ -32188,14 +33678,14 @@ Item Effects:
 		<EffectInfo name="" description="Christmas 2022 Reskin" descriptionColor="0x98B8D1"/>
 	</ExtraTooltipData>
 	<ReskinOf>Abaddon's Bracelet</ReskinOf>
-	<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="26" amount="80">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="50">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<ChristmasLegendary/>
 	<Legendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>234</ItemEffect>
 </Object>
 <Object type="0x7396" id="North Pole's Orb">
 	<Class>Equipment</Class>
@@ -32211,18 +33701,18 @@ Item Effects:
 	</ExtraTooltipData>
 	<ReskinOf>Hellfire Orb</ReskinOf>
 	<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>110</MpCost>
-	<Activate totalDamage="2000" radius="7.25" center="player" hideParticles="true">DamageBlast</Activate>
-	<Activate effect="Damaging" duration="3.5">ConditionEffectSelf</Activate>
-	<Activate stat="20" amount="20" duration="3.5" noStack="true">StatBoostSelf</Activate>
-	<Activate type="FlameNova" color="0x98B8D1" color2="0xFFF8D8" radius="7.25" center="player">ShowEffect</Activate>
+	<MpCost>100</MpCost>
+	<Activate totalDamage="2000" radius="7" center="player" hideParticles="true">DamageBlast</Activate>
+	<Activate effect="Damaging" duration="5">ConditionEffectSelf</Activate>
+	<Activate type="FlameNova" color="0x98B8D1" color2="0xFFF8D8" radius="7" center="player">ShowEffect</Activate>
 	<ChristmasLegendary/>
 	<Legendary/>
-	<ItemEffect>7</ItemEffect>
+	<ItemEffect>230</ItemEffect>
 </Object>
 <Object type="0x7395" id="Ring of the New Sun">
 	<Class>Equipment</Class>
@@ -32522,15 +34012,14 @@ Item Effects:
 	</ExtraTooltipData>
 	<ReskinOf>Covering of Mermaid Goddess</ReskinOf>
 	<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="0" amount="140">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="20">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="26" amount="14">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="30">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<ChristmasLegendary/>
 	<Legendary/>
-	<ItemEffect>4</ItemEffect>
+	<ItemEffect>242</ItemEffect>
 </Object>
 <Object type="0x7383" id="Candy Slash">
 	<Class>Projectile</Class>
@@ -32798,7 +34287,7 @@ Item Effects:
 	<FameBonus>8</FameBonus>
 	<ChristmasLegendary/>
 	<Legendary/>
-	<ItemEffect>4</ItemEffect>
+	<ItemEffect>243</ItemEffect>
 </Object>
 <Object type="0x7372" id="Elf Suit">
 	<Class>Equipment</Class>
@@ -32917,7 +34406,7 @@ Item Effects:
 	<AwakenedEffects>88</AwakenedEffects>
 	<FusionInteraction/>
 	<MaxEssences>2</MaxEssences>
-	<EssenceBoost amount="0.03">Damage</EssenceBoost>
+	<EssenceBoost stat="22" amount="4">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="0" amount="30">IncrementStat</EssenceBoost>
 </Object>
 <Object type="0x7366" id="Chocolate Cookie">
@@ -34575,7 +36064,7 @@ Item Effects:
 	<ReskinOf>Heart of the Mountains</ReskinOf>
 	<Description>This necklace holds the Halloween spirit in its purest form, channeling it through your body makes you feel undefeatable.</Description>
 	<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
@@ -34588,7 +36077,6 @@ Item Effects:
 	<MaxEssences>5</MaxEssences>
 	<EssenceBoost customAmount="100" customName="Rolling Damage">Custom</EssenceBoost>
 	<EssenceBoost customAmount="100" customName="Flung Snowball Damage">Custom</EssenceBoost>
-	<EssenceBoost stat="0" amount="6">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="27" amount="4">IncrementStat</EssenceBoost>
 </Object>
@@ -34862,8 +36350,8 @@ Item Effects:
 <Object type="0x72ce" id="Pumpking Arrow">
 	<Class>Projectile</Class>
 	<Texture>
-		<File>lofiObj7</File>
-		<Index>0x1786</Index>
+		<File>halloween24</File>
+		<Index>0x13f</Index>
 	</Texture>
 	<AngleCorrection>1</AngleCorrection>
 </Object>
@@ -34876,7 +36364,7 @@ Item Effects:
 	</Texture>
 	<SlotType>3</SlotType>
 	<Description>This bow is said to extend Halloween by 1 day for every arrow fired from it.</Description>
-	<RateOfFire>1.6</RateOfFire>
+	<RateOfFire>0.5</RateOfFire>
 	<OldSound>arrowShoot</OldSound>
 	<ExtraTooltipData>
 		<EffectInfo name="" description="Halloween 2022 Reskin"/>
@@ -34885,11 +36373,11 @@ Item Effects:
 	<Projectile>
 		<ObjectId>Pumpking Arrow</ObjectId>
 		<Speed>200</Speed>
-		<MinDamage>160</MinDamage>
-		<MaxDamage>225</MaxDamage>
+		<MinDamage>850</MinDamage>
+		<MaxDamage>950</MaxDamage>
 		<LifetimeMS>412.5</LifetimeMS>
 		<Size>100</Size>
-		<ArmorPiercing/>
+		<MultiHit/>
 		<PassesCover/>
 	</Projectile>
 	<ActivateOnEquip stat="26" amount="8">IncrementStat</ActivateOnEquip>
@@ -42857,7 +44345,7 @@ Item Effects:
 	<SlotType>9</SlotType>
 	<Description>This decorated necklace holds a symbolic gem found in the center of a mountain. Villages near the mountains believed that this gem was giving them protection.</Description>
 	<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
@@ -42869,7 +44357,6 @@ Item Effects:
 	<MaxEssences>5</MaxEssences>
 	<EssenceBoost customAmount="100" customName="Rolling Damage">Custom</EssenceBoost>
 	<EssenceBoost customAmount="100" customName="Flung Snowball Damage">Custom</EssenceBoost>
-	<EssenceBoost stat="0" amount="6">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="27" amount="4">IncrementStat</EssenceBoost>
 </Object>
@@ -52640,17 +54127,22 @@ Item Effects:
 	</Texture>
 	<SlotType>19</SlotType>
 	<Description>The Skull of a seaborn monster from deep below.</Description>
-	<ActivateOnEquip stat="0" amount="145">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="11">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+	<ExtraTooltipData>
+		<EffectInfo name="Drowned Soul" description="Chases the nearest enemy, zaps nearest enemy for 600 damage every second"/>
+	</ExtraTooltipData>
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>120</MpCost>
+	<MpCost>160</MpCost>
+	<Cooldown>3</Cooldown>
 	<Activate effect="Armored" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
 	<Activate effect="Berserk" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
-	<Activate radius="3.5" totalDamage="1000" condEffect="Weak" condDuration="2" heal="140" ignoreDef="75" wisDamageBase="75" useWisMod="true">VampireBlast</Activate>
+	<Activate objectId="Drowned Soul Ally" maxTargets="10" radius="1.0" amount="4" center="mouse" duration="3.5" statMod="27" durationPerStat="0.1">Ally</Activate>
 	<Legendary/>
-	<ItemEffect>3</ItemEffect>
+	<ItemEffect>231</ItemEffect>
 </Object>
 <Object type="0x6f32" id="Tide Magic">
 	<Class>Projectile</Class>
@@ -84822,13 +86314,18 @@ Item Effects:
 	<Soulbound/>
 </Object>
 <Object type="0x6a1c" id="Blackhole Object">
-	<Class>GameObject</Class>
+	<Class>Character</Class>
 	<Texture>
 		<File>lofiObj7</File>
 		<Index>0xac1</Index>
 	</Texture>
-	<Effect color="0xEC9047">Vortex</Effect>
 	<ShadowSize>75</ShadowSize>
+	<Ally/>
+	<NoFollow/>
+	<Invincible/>
+	<NotTargetable/>
+	<AllDebuffsImmune/>
+	<Effect color="0xEC9047">Vortex</Effect>
 	<Animation prob="1.0" period="0.0">
 		<Frame time="0.1">
 			<Texture>
@@ -87277,8 +88774,9 @@ Item Effects:
 	<BagType>11</BagType>
 	<Activate dosesReq="220">Crate</Activate>
 	<ItemCrate>
-		<CrateLoot chance="1.0" lootTable="0x5b25,0xbab,0xc02,0x5f83,0x916,0xbac">LootTable</CrateLoot>
+		<CrateLoot chance="1.0" lootTable="0x5b25,0x9a6,0xc02,0x5f83,0x916,0xbac">LootTable</CrateLoot>
 		<!-- Robe of Bloodbath, The Forgotten Crown, Doom Bow, Firestorm Katana, Midnight Star, The Twilight Gemstone  -->
+		<!-- the forgotten crown replaced with leaf crown -->
 	</ItemCrate>
 	<Consumable/>
 	<Soulbound/>
@@ -93277,7 +94775,7 @@ Item Effects:
 	<AwakenedEffects>88</AwakenedEffects>
 	<FusionInteraction/>
 	<MaxEssences>2</MaxEssences>
-	<EssenceBoost amount="0.03">Damage</EssenceBoost>
+	<EssenceBoost stat="22" amount="4">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="0" amount="30">IncrementStat</EssenceBoost>
 </Object>
 <Object type="0x024d" id="Quiver of Wild Shadows">
@@ -93354,7 +94852,7 @@ Item Effects:
 	<BagType>10</BagType>
 	<FameBonus>8</FameBonus>
 	<Legendary/>
-	<ItemEffect>4</ItemEffect>
+	<ItemEffect>243</ItemEffect>
 </Object>
 <Object type="0x0251" id="Omnipotence Ring">
 	<Class>Equipment</Class>
@@ -102337,10 +103835,9 @@ Item Effects:
 		<EffectInfo name="" description="This item can be used for crafting"/>
 	</ExtraTooltipData>
 	<Description>Robe of the buried ancient god whose full power has been lost for centuries, a small presence of it can still be felt within this robe.</Description>
-	<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="12">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="0" amount="180">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
 	<BagType>5</BagType>
 	<FameBonus>5</FameBonus>
 	<Soulbound/>
@@ -107430,7 +108927,6 @@ Item Effects:
 	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="27" amount="14">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="3" amount="140">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
@@ -113374,14 +114870,14 @@ Item Effects:
 		<Index>0x6be</Index>
 	</Texture>
 	<SlotType>9</SlotType>
-	<Description>This ancient bracelet was made out of demon skin and blood. Worn by Abaddon to grant him infite powers.</Description>
-	<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="26" amount="80">IncrementStat</ActivateOnEquip>
+	<Description>An unholy bracelet, wrapped in demon skin. It appears to be all that’s left of the former ruler of the Hell Depths.</Description>
+	<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="50">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>234</ItemEffect>
 </Object>
 <Object type="0x5f75" id="Hellfire Orb">
 	<Class>Equipment</Class>
@@ -113393,17 +114889,17 @@ Item Effects:
 	<SlotType>21</SlotType>
 	<Description>Orb that holds ancient powers of hell, ready to be released upon the strongest of magic casters.</Description>
 	<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>110</MpCost>
-	<Activate totalDamage="2000" radius="7.25" center="player" hideParticles="true">DamageBlast</Activate>
-	<Activate effect="Damaging" duration="3.5">ConditionEffectSelf</Activate>
-	<Activate stat="20" amount="20" duration="3.5" noStack="true">StatBoostSelf</Activate>
-	<Activate type="FlameNova" color="0xFFB23F" color2="0xF25626" radius="7.25" center="player">ShowEffect</Activate>
+	<MpCost>100</MpCost>
+	<Activate totalDamage="2000" radius="7" center="player" hideParticles="true">DamageBlast</Activate>
+	<Activate effect="Damaging" duration="5">ConditionEffectSelf</Activate>
+	<Activate type="FlameNova" color="0xFFB23F" color2="0xF25626" radius="7" center="player">ShowEffect</Activate>
 	<Legendary/>
-	<ItemEffect>7</ItemEffect>
+	<ItemEffect>230</ItemEffect>
 </Object>
 <Object type="0x814" id="Ravager Hurl">
   <Class>Projectile</Class>
@@ -113858,8 +115354,8 @@ Item Effects:
 <Object type="0x5d42" id="BoKP Arrow">
 	<Class>Projectile</Class>
 	<Texture>
-		<File>lofiObj7</File>
-		<Index>0x1d8e</Index>
+		<File>halloween24</File>
+		<Index>0x13b</Index>
 	</Texture>
 	<AngleCorrection>1</AngleCorrection>
 </Object>
@@ -113872,16 +115368,16 @@ Item Effects:
 	</Texture>
 	<SlotType>3</SlotType>
 	<Description>Remains of the King of all Wizards were turned into a bow to be wielded by the strongest of human.</Description>
-	<RateOfFire>1.6</RateOfFire>
+	<RateOfFire>0.5</RateOfFire>
 	<Sound>weapon/heavy_crossbow</Sound>
 	<Projectile>
 		<ObjectId>BoKP Arrow</ObjectId>
 		<Speed>200</Speed>
-		<MinDamage>160</MinDamage>
-		<MaxDamage>225</MaxDamage>
+		<MinDamage>850</MinDamage>
+		<MaxDamage>950</MaxDamage>
 		<LifetimeMS>412.5</LifetimeMS>
 		<Size>100</Size>
-		<ArmorPiercing/>
+		<MultiHit/>
 		<PassesCover/>
 	</Projectile>
 	<NumProjectiles>1</NumProjectiles>
@@ -114592,11 +116088,11 @@ Item Effects:
 	<Description>The withered will burn, and their essence will be recycled toward new life.</Description>
 	<ActivateOnEquip stat="22" amount="37">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip>
-  <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>8</FameBonus>
 	<Legendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>235</ItemEffect>
 </Object>
 <Object type="0x81c" id="Sprig of Amber">
 	<Class>Equipment</Class>
@@ -114611,14 +116107,14 @@ Item Effects:
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>180</MpCost>
-  <Activate totalDamage="0" maxTargets="5" condDuration="3" color="0x3B8923" statMod="22" statPerTarget="75" damagePerStat="35">Lightning</Activate>
-  <Activate totalDamage="2750" maxTargets="1" condDuration="3" color="0xFFBB00" useWisMod="true">Lightning</Activate>
+	<MpCost>165</MpCost>
+    <Activate totalDamage="0" maxTargets="5" condDuration="3" color="0x3B8923" statMod="22" statPerTarget="75" damagePerStat="30">Lightning</Activate>
+    <Activate totalDamage="2350" maxTargets="1" condDuration="3" color="0xFFBB00" useWisMod="true">Lightning</Activate>
 	<Legendary/>
 	<ItemEffect>184</ItemEffect>
-  <ActivateOnEquip stat="21" amount="9">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="21" amount="9">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
-  <ActivateOnEquip stat="27" amount="18">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="27" amount="18">IncrementStat</ActivateOnEquip>
 </Object>
 <Object type="0x5f98" id="Sylvia Death Anim">
 	<DisplayId>Sylvia the Forest Witch</DisplayId>
@@ -120814,21 +122310,16 @@ Item Effects:
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<ActivateOnEquip stat="0" amount="-50">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
-	<MpCost>110</MpCost>
-	<Activate range="6" amount="90" maxWisMod="300" noWisMod="range" useWisMod="true" hideParticles="true">
-		HealNova
-	</Activate>
-	<Activate effect="Healing" duration="3" range="6" color="0xFFFFFF" noWisMod="range" useWisMod="true" hideParticles="true">
-		ConditionEffectAura
-	</Activate>
+	<ActivateOnEquip stat="138" amount="100">IncrementStat</ActivateOnEquip>
+	<MpCost>90</MpCost>
+	<Activate effect="Healing" duration="3" range="6" color="0xFFFFFF" noWisMod="range" useWisMod="true" hideParticles="true">ConditionEffectAura</Activate>
 	<Activate effect="Damaging" duration="3" range="6" noWisMod="range" color="0xFF0000">ConditionEffectAura</Activate>
 	<Activate effect="Berserk" duration="3">ConditionEffectSelf</Activate>
 	<Legendary/>
-	<ItemEffect>3</ItemEffect>
+	<Cooldown>3.5</Cooldown>
+	<ItemEffect>228</ItemEffect>
 </Object>
 <Object type="0x6161" id="Hell's Battleplate">
 	<Class>Equipment</Class>
@@ -126020,7 +127511,7 @@ Item Effects:
 		<Speed>100</Speed>
 		<LifetimeMS>2000</LifetimeMS>
 		<ArmorPiercing/>
-		<Multihit/>
+		<MultiHit/>
 		<ConditionEffect duration="2">Paralyzed</ConditionEffect>
 		<Size>140</Size>
 	</Projectile>
@@ -126749,12 +128240,12 @@ Item Effects:
 	<Description>Golden crown that protects your entire head, it has a gemstone made out of enchanted ice attached that transfers all of her majesty to you.</Description>
 	<ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="3" amount="120">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="20" amount="18">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>233</ItemEffect>
 </Object>
 <Object type="0x5cd1" id="King's Jewel">
 	<TransformResult>Hellpiece</TransformResult>
@@ -128750,16 +130241,15 @@ Item Effects:
 		<Index>0x4a5</Index>
 	</Texture>
 	<SlotType>6</SlotType>
-	<Description>A protective cloth of Thessal decorated with magic treasures and fine gold plates. Thanks to: Omanoit!</Description>
+	<Description>"Just one of the Ocean Princess' many dresses, modest but well crafted. The creatures of the deep flock around you while you have it on, mistaking you for their ruler."</Description>
 	<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="0" amount="140">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="20">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="26" amount="14">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="26" amount="30">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
-	<ItemEffect>4</ItemEffect>
+	<ItemEffect>242</ItemEffect>
 </Object>
 <Object type="0x5c26" id="Hunter's Trap">
 	<Class>Equipment</Class>
@@ -132435,19 +133925,19 @@ Item Effects:
 	<Class>Equipment</Class>
 	<Item/>
 	<Texture>
-		<File>lofiObj2</File>
-		<Index>0x37f</Index>
+		<File>halloween24</File>
+		<Index>0x110</Index>
 	</Texture>
 	<SlotType>7</SlotType>
-	<Description>This massive armor crafted from body of Aben is emitting huge amount of strength to protect you.</Description>
-	<ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="25">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="17">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+	<Description>A stone chassis, created to hold together the molten innards of Aben. The stone sheets of this armor are seeping with magic, after having been exposed to the Molten Guardian for centuries.</Description>
+	<ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="35">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
-	<ItemEffect>6</ItemEffect>
+	<ItemEffect>232</ItemEffect>
 </Object>
 <Object type="0x5b2a" id="Guardians Shield">
 	<Class>Projectile</Class>
@@ -132897,13 +134387,13 @@ Item Effects:
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<MpCost>100</MpCost>
-	<Activate totalDamage="1650" maxTargets="4" condEffect="ArmorBroken" condDuration="3" color="0x020300" useWisMod="true">Lightning</Activate>
-	<Activate effect="Paralyzed" duration="2.1" range="2.5" color="0x4FA4F7" target="enemy" center="mouse" visualEffect="8" useWisMod="true">GenericActivate</Activate>
+	<Activate totalDamage="1500" maxTargets="4" color="0x020300" useWisMod="true">Lightning</Activate>
+	<Activate effect="Paralyzed" duration="2.5" range="2.5" color="0x4FA4F7" target="enemy" center="mouse" visualEffect="8">GenericActivate</Activate>
 	<Legendary/>
-	<ItemEffect>5</ItemEffect>
+	<ItemEffect>229</ItemEffect>
 	<ActivateOnEquip stat="3" amount="120">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="12">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
 </Object>
 <Object type="0x5af8" id="The Teardropper">
 	<Class>Equipment</Class>
@@ -134814,16 +136304,15 @@ Item Effects:
 	</Texture>
 	<SlotType>11</SlotType>
 	<Description>A signature spell of the Legendary Wizard now properly refined through countless experimentation and mastery. Prophecies tell that a true master of lightning must also be a master of water and air, for one cannot conjure the perfect storm without these two.</Description>
-  <ExtraTooltipData>
-    <EffectInfo name="On Use" description="Marks the closest enemy to your cursor for an electrical barrage."/>
-  </ExtraTooltipData>
-  <ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip>
+    <ExtraTooltipData>
+		<EffectInfo name="On Use" description="Marks the closest enemy to your cursor for an electrical barrage."/>
+    </ExtraTooltipData>
+    <ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="116" amount="25">IncrementStat</ActivateOnEquip>
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<MpCost>125</MpCost>
-  <Cooldown>1</Cooldown>
 	<Legendary/>
 	<ItemEffect>220</ItemEffect>
 </Object>
@@ -135040,7 +136529,8 @@ Item Effects:
 	<ActivateOnEquip stat="28" amount="-10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="21" amount="-10">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="25">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="100">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="27" amount="90">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="116" amount="100">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
@@ -135048,8 +136538,9 @@ Item Effects:
 	<AwakenedEffects>169</AwakenedEffects>
 	<FusionInteraction/>
 	<MaxEssences>5</MaxEssences>
-	<EssenceBoost stat="26" amount="6">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="27" amount="5">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="26" amount="3">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="27" amount="3">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="116" amount="10">IncrementStat</EssenceBoost>
 </Object>
 <Object type="0x5910" id="Flask 'o' Fires">
 	<Class>Equipment</Class>
@@ -138266,6 +139757,7 @@ Item Effects:
 	<Soulbound/>
 </Object>
 <Object type="0x5926" id="Soul of Asclepius">
+	<TransformResult>Code of the Universe</TransformResult>
 	<Class>Equipment</Class>
 	<Item/>
 	<Texture>
@@ -138515,18 +140007,23 @@ Item Effects:
 		<Index>0x2ab</Index>
 	</Texture>
 	<SlotType>19</SlotType>
-	<Description>You never knew who she actually was, her true identity will stay unknown forever...</Description>
-	<ActivateOnEquip stat="0" amount="145">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="11">IncrementStat</ActivateOnEquip>
+	<Description>A life defined by turmoil, lashing out at all of those who loved her, only to die so unceremoniously. May her and the countless souls she drowned one day find peace.</Description>
+	<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+	<ExtraTooltipData>
+		<EffectInfo name="Drowned Soul" description="Chases the nearest enemy, zaps nearest enemy for 600 damage every second"/>
+	</ExtraTooltipData>
 	<Usable/>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
-	<MpCost>120</MpCost>
+	<MpCost>160</MpCost>
+	<Cooldown>3</Cooldown>
 	<Activate effect="Armored" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
 	<Activate effect="Berserk" duration="3" useWisMod="true">ConditionEffectSelf</Activate>
-	<Activate radius="3.5" totalDamage="1000" condEffect="Weak" condDuration="2" heal="140" ignoreDef="75" wisDamageBase="75" useWisMod="true">VampireBlast</Activate>
+	<Activate objectId="Drowned Soul Ally" maxTargets="10" radius="1.0" amount="4" center="mouse" duration="3.5" statMod="27" durationPerStat="0.1">Ally</Activate>
 	<Legendary/>
-	<ItemEffect>3</ItemEffect>
+	<ItemEffect>231</ItemEffect>
 </Object>
 <Object type="0x5cfa" id="Tears Magic">
 	<Class>Projectile</Class>
@@ -138622,8 +140119,8 @@ Item Effects:
 	<Projectile>
 		<ObjectId>Destiny Arrow</ObjectId>
 		<Speed>170</Speed>
-		<MinDamage>500</MinDamage>
-		<MaxDamage>500</MaxDamage>
+		<MinDamage>400</MinDamage>
+		<MaxDamage>400</MaxDamage>
 		<LifetimeMS>350</LifetimeMS>
 		<Amplitude>0.3</Amplitude>
 		<Frequency>0.4</Frequency>
@@ -138762,12 +140259,11 @@ Item Effects:
 	</Texture>
 	<SlotType>14</SlotType>
 	<Description>A heavy brutal fashioned robe protected with bones of the Bloodbrother and his goresome essence.</Description>
-	<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="21" amount="26">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="27" amount="8">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="28" amount="-5">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="21" amount="20">IncrementStat</ActivateOnEquip>
 	<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
-	<ActivateOnEquip stat="0" amount="90">IncrementStat</ActivateOnEquip>
+	<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
 	<BagType>10</BagType>
 	<FameBonus>7</FameBonus>
 	<Legendary/>
@@ -138775,10 +140271,10 @@ Item Effects:
 	<AwakenedEffects>136</AwakenedEffects>
 	<FusionInteraction/>
 	<MaxEssences>5</MaxEssences>
-	<EssenceBoost stat="0" amount="10">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="0" amount="5">IncrementStat</EssenceBoost>
 	<EssenceBoost stat="20" amount="2">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="28" amount="1">IncrementStat</EssenceBoost>
-	<EssenceBoost stat="26" amount="1">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="28" amount="-1">IncrementStat</EssenceBoost>
+	<EssenceBoost stat="26" amount="2">IncrementStat</EssenceBoost>
 </Object>
 <Object type="0x5b24" id="Helm of Bloodbrother">
 	<Class>Equipment</Class>
@@ -144904,7 +146400,7 @@ Item Effects:
 		<EffectInfo name="Blackhole Effect" description="Stasis within 2.5 sqrs"/>
 		<EffectInfo name="Blackhole Effect" description="Cursed within 5.5 sqrs"/>
 	</ExtraTooltipData>
-	<Activate objectId="Blackhole Object" duration="4.5">Pet</Activate>
+	<Activate objectId="Blackhole Object" duration="4.5">Ally</Activate>
 	<Activate effect="Damaging" duration="4" useWisMod="true">ConditionEffectSelf</Activate>
 	<Cooldown>4</Cooldown>
 </Object>

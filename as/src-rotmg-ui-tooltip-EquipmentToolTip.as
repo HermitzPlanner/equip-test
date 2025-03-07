@@ -790,6 +790,38 @@ package rotmg.ui.tooltip
                return "#89C4FF";
             case SpecialEffects.COLOSSAL_CURRENT:
                return "#89C4FF";
+            case SpecialEffects.SATANIC_TEXTS:
+               return "#CD3333";
+            case SpecialEffects.TEMPEST:
+               return "#4FA4F7";
+            case SpecialEffects.IGNIS_FATUUS:
+               return "#F76B25";
+            case SpecialEffects.FLOATING_GRAVEYARD:
+               return "#659CCC";
+            case SpecialEffects.GUARDIANS_WRATH:
+               return "#F93E13";
+            case SpecialEffects.ROYAL_PRESENCE:
+               return "#2551BA";
+            case SpecialEffects.DEMON_SKIN:
+               return "#9B1037";
+            case SpecialEffects.CYCLE_OF_LIFE:
+               return "#F96A00";
+            case SpecialEffects.LAEVATEIN:
+               return "#F93E13";
+            case SpecialEffects.EVASIVE_MANEUVERS:
+               return "#9B2031";
+            case SpecialEffects.ICE_AGE:
+               return "#72C4FF";
+            case SpecialEffects.NATURES_EMBRACE:
+               return "#38761D";
+            case SpecialEffects.SCORNED:
+               return "#FF4D2D";
+            case SpecialEffects.STORM_APPROACHING:
+               return "#5BACC0";
+            case SpecialEffects.LEGION_OF_THE_DEEP:
+               return "#D3230A";
+            case SpecialEffects.SCOURGE_OF_THE_REALMS:
+               return "#674EA7";
             default:
                return "#FFFFFF";
          }
@@ -802,22 +834,6 @@ package rotmg.ui.tooltip
             return true;
          }
          return player.slotTypes_.indexOf(slotType) != -1;
-      }
-      
-      private static function ApplyDemonEyesWisMod(value:Number, player:Player) : Number
-      {
-         if(!player)
-         {
-            return value;
-         }
-         var wisdom:Number = Math.min(player.wisdom_,MAX_WISMOD);
-         if(wisdom <= 60)
-         {
-            return value;
-         }
-         var cooldownDecrease:Number = Math.floor((wisdom - 60) / 20) * 0.5;
-         var newValue:Number = Math.max(2,value - cooldownDecrease) - 0.25;
-         return Round(newValue,2);
       }
       
       private static function GetMatches(eff:String, effects:Vector.<ActivateEffect>) : Vector.<ActivateEffect>
@@ -999,7 +1015,6 @@ package rotmg.ui.tooltip
          var atkIncrease:int = 5 * demonicSacrifices;
          var dexIncrease:int = 5 * demonicSacrifices;
          var spdIncrease:int = 11 * demonicSacrifices;
-         var hoarderColor:String = "#F9912F";
          statDict[20] = (statDict[20] || 0) + atkIncrease;
          statDict[28] = (statDict[28] || 0) + dexIncrease;
          statDict[22] = (statDict[22] || 0) + spdIncrease;
@@ -1007,9 +1022,9 @@ package rotmg.ui.tooltip
          {
             return;
          }
-         boostDict[20] = (boostDict[20] || "") + textColor(" (+" + atkIncrease + ")",hoarderColor);
-         boostDict[28] = (boostDict[28] || "") + textColor(" (+" + dexIncrease + ")",hoarderColor);
-         boostDict[22] = (boostDict[22] || "") + textColor(" (+" + spdIncrease + ")",hoarderColor);
+         boostDict[20] = (boostDict[20] || "") + textColor(" (+" + atkIncrease + ")","#F9912F");
+         boostDict[28] = (boostDict[28] || "") + textColor(" (+" + dexIncrease + ")","#F9912F");
+         boostDict[22] = (boostDict[22] || "") + textColor(" (+" + spdIncrease + ")","#F9912F");
       }
       
       private static function CountKeys(dict:Dictionary) : int
@@ -1108,7 +1123,7 @@ package rotmg.ui.tooltip
             case SpecialEffects.SNOWBALL:
                return "<b>Snowball:</b> " + "On ability use, spawn a big snowball that explodes at cursor. (2s cooldown)";
             case SpecialEffects.DEMON_EYES:
-               return "<b>Demon Eyes:</b> " + "On ability use, spawn 5 minions that will dash at the nearest enemy and explode, " + "dealing 3000 damage within 2 sqrs. (5s cooldown)";
+               return "<b>Demon Eyes:</b> " + "On ability use, spawn 5 minions that will dash at the nearest enemy and explode, " + "dealing 3000 damage within 2 sqrs. (3s cooldown)";
             case SpecialEffects.PRIMAL_INSTINCTS:
                return "<b>Primal Instincts:</b> " + "While equipped, you become Feral, gaining 20% damage reduction and " + "immunity to Blind, Unstable, Dazed and Weak.";
             case SpecialEffects.DEATH_CROWS:
@@ -1134,11 +1149,11 @@ package rotmg.ui.tooltip
             case SpecialEffects.ABRASIVE:
                return "<b>Abrasive:</b> " + "Every 1.5 seconds, gain 5% dodge chance, stacking up to 25%. " + "Every successful dodge reduces this dodge chance by 10%. " + "Your dodge chance cannot go negative from this effect.";
             case SpecialEffects.STARWEAVER:
-               return "<b>Starweaver:</b> " + "On ability use, the first 5 targeted enemies are each surrounded with a circle of 3 stars " + "that converge after half a second and deal 500 damage each. ";
+               return "<b>Starweaver:</b> " + "On ability use, the first 5 targeted enemies are each surrounded with a circle of 3 stars " + "that converge after half a second and deal 400 damage each. ";
             case SpecialEffects.GORGONS_GAZE:
                return "<b>Gorgon’s Gaze:</b> " + "Every second ability cast throws an additional poison bomb that deals 3000 damage within 5 squares over 3 seconds.";
             case SpecialEffects.AID_OF_THE_FOREST:
-               return "<b>Aid of the Forest:</b> " + "All forms of instant healing are increased by 50% when below 30% HP.";
+               return "<b>Aid of the Forest:</b> " + "On ability use, spawn a ring of three fireflies that follow you and " + "fire at nearby enemies for 6 seconds, dealing 300 damage every 0.5 seconds.";
             case SpecialEffects.SCORCHED_EARTH:
                return "<b>Scorched Earth:</b> " + "On hit, applies 0.2 seconds of Scorched. " + "Additional hits of the staff increase the duration of Scorched up to a maximum of 6 seconds, " + "and damage dealt by Scorched scales with the max duration. " + "If the Scorched duration is maxed out, additional shots will fill a secondary bar that, " + "once filled, inflicts a 1500 damage AoE that applies Armor Broken.";
             case SpecialEffects.IGNITION:
@@ -1248,9 +1263,9 @@ package rotmg.ui.tooltip
             case SpecialEffects.MARK_OF_THE_ANCIENTS:
                return "<b>Mark of the Ancients:</b> " + "On enemy hit, 20% chance to activate your currently equipped ability for free. " + "Cooldown scales with MP Cost. " + "(" + this.getMarkOfTheHuntressCooldown() + "s cooldown)";
             case SpecialEffects.BOUND_SOULS:
-               return "<b>Bound Souls:</b> " + "Each shot landed on an enemy grants you a stack of Void, up to a max of 50 stacks. " + "Every 3 stacks of Void grants you +1% attack speed. " + "Upon reaching 50 stacks of Void, you lose all of your Void stacks and are healed for 50 HP.";
+               return "<b>Bound Souls:</b> " + "Each shot landed on an enemy grants you a stack of Void, up to a max of 50 stacks. " + "Every 3 stacks of Void grants you +1% attack speed. " + "When you fall below 70% of your maximum HP consume all stacks of Void and heal 10 HP for every 10 stacks consumed";
             case SpecialEffects.UNBOUND_SOULS:
-               return "<b>Unbound Souls:</b> " + "Each shot landed on an enemy grants you a stack of Void, up to a max of 40 stacks. " + "Every 2 stacks of Void grants you +1% attack speed. " + "Upon reaching 40 stacks of Void, you lose all of your Void stacks and are healed for 60 HP.";
+               return "<b>Unbound Souls:</b> " + "Each shot landed on an enemy grants you a stack of Void, up to a max of 40 stacks. " + "Every 2 stacks of Void grants you +1% attack speed and 1% increased weapon damage. " + "When you fall below 80% of your maximum HP consume 10 stacks of void and heal 20 HP every " + "second until you run out of stacks or you are above 70% of your maximum HP.";
             case SpecialEffects.THRILL_OF_THE_HUNT:
                return "<b>Thrill of the Hunt:</b> " + "While equipped, gain Armored while within 5 squares of an enemy.";
             case SpecialEffects.GOBLIN_MASSACRE:
@@ -1322,7 +1337,7 @@ package rotmg.ui.tooltip
             case SpecialEffects.MEGALOMANIAC:
                return "<b>Megalomaniac:</b> " + "On ability cast, deal damage to all enemies within 10 squares equal to 2x the health you restore to allies and yourself. " + "Capped at 7500 damage per cast.";
             case SpecialEffects.METEOR_SHOWER:
-               return "<b>Meteor Shower:</b> " + "On ability use, the first 5 targeted enemies are each surrounded with a circle of 3 stars " + "that converge immediately and deal 750 damage each.";
+               return "<b>Meteor Shower:</b> " + "On ability use, the first 5 targeted enemies are each surrounded with a circle of 3 stars " + "that converge immediately and deal 500 damage each.";
             case SpecialEffects.DEFENSE_PROTOCOL:
                return "<b>Defense Protocol:</b> " + "Shield Recharge Time is reduced by 15%. While you have any shield, gain +10 ATK and +20 SPD.";
             case SpecialEffects.DEFENSE_MATRIX:
@@ -1364,9 +1379,9 @@ package rotmg.ui.tooltip
             case SpecialEffects.IMMORTALITY_2:
                return "<b>Immortality:</b> " + "While equipped, the player is revived on death, and this ring is destroyed. " + "After being revived, the character and all items become shattered and cannot be revived again.";
             case SpecialEffects.COSMIC_HERMIT:
-               return "<b>Cosmic Hermit:</b> " + "Every 10th ability cast restores 25 shield.";
+               return "<b>Cosmic Hermit:</b> " + "20% of MP spent on ability cast is converted into Shield.";
             case SpecialEffects.COSMIC_SAGE:
-               return "<b>Cosmic Sage:</b> " + "Every 10th ability cast restores 50 shield.";
+               return "<b>Cosmic Sage:</b> " + "30% of MP spent on ability cast is converted into Shield.";
             case SpecialEffects.REINFORCED:
                return "<b>Reinforced:</b> " + "While equipped, every 5 Defense grants you 1% damage reduction against Armor Piercing damage. " + "Armor Broken negates this effect. Capped at 20% damage reduction.";
             case SpecialEffects.INDESTRUCTIBLE:
@@ -1376,7 +1391,7 @@ package rotmg.ui.tooltip
             case SpecialEffects.ABLAZE:
                return "<b>Ablaze:</b> " + "Casting your ability grants a stackable, additive 10% mana cost reduction for 2 seconds.";
             case SpecialEffects.EXACERBATE:
-               return "<b>Exacerbate:</b> " + "Critically striking enemies unleashes decapitators around them, smiting them for 25% of your damage within " + "3.5 squares. Using your ability causes this effect to proc 3 times per critical hit for 5 seconds.";
+               return "<b>Exacerbate:</b> " + "Every 3rd critical hit on enemies unleashes decapitators around them, " + "smiting them for 50% of your damage within 3.5 squares. " + "Using your ability causes this effect to proc 3 times every 3 critical hits for 5 seconds.";
             case SpecialEffects.OGRISH_REGALIA:
                return "<b>Ogrish Regalia:</b> " + "While Armored, 400% of your Defense stat is added to your Shield bash as damage (Capping at 125 Defense). " + "Abilities used while not affected by Armored are 50% cheaper in mana cost.";
             case SpecialEffects.MIGHT_OF_THE_ANCIENTS:
@@ -1384,7 +1399,7 @@ package rotmg.ui.tooltip
             case SpecialEffects.NULLIFY:
                return "<b>Nullify:</b> " + "Damage taken is multiplied by 4x and reflected back to the enemy that dealt it.";
             case SpecialEffects.HIDDEN_TECHNIQUE:
-               return "<b>Hidden Technique:</b> " + "Every critical hit landed gives you +3 VIT for 3 seconds, up to +30 VIT.";
+               return "<b>Hidden Technique:</b> " + "When you take 50 or more damage from an enemy convert 100% of the damage taken " + "into VIT for 5 seconds and retaliate, dealing 3x of your weapon damage (10 sec cooldown).";
             case SpecialEffects.ABSOLUTE_ZERO:
                return "<b>Absolute Zero:</b> " + "Enemies hit by the shield bash explode, shooting out 3 piercing ice shards that deal " + "750 damage and Slow for 3.5 seconds.";
             case SpecialEffects.GLACIAL_TEMPEST:
@@ -1448,9 +1463,9 @@ package rotmg.ui.tooltip
             case SpecialEffects.HEAVY_ARTILLERY:
                return "<b>Heavy Artillery:</b> " + "Every 8 seconds, a cannon spawns within 5 squares of you. Casting your ability within " + "3 squares of a cannon destroys it and fires a cannonball at the enemy closest " + "to cursor within 10 squares, dealing 10000 damage within 3 squares. " + "Cannons expire after not being used for 30 seconds.";
             case SpecialEffects.LINGERING_WILL:
-               return "<b>Lingering Will:</b> " + "Every 60 shots landed fires a volley of three splitting shots that deal 700 damage each. " + "Every shot landed with these shots grants a stacking Berserk for 1.5 seconds, " + "up to a maximum duration of 4.5 seconds.";
+               return "<b>Lingering Will:</b> " + "Every 25 shots landed fires a volley of three splitting shots that deal 700 damage each. " + "Every shot landed with these shots grants a stacking Berserk for 1.5 seconds, " + "up to a maximum duration of 4.5 seconds.";
             case SpecialEffects.APOCALYPSE:
-               return "<b>Apocalypse:</b> " + "Every 3rd critical hit spawns a lightning bolt on the damaged enemy that deals " + "750-1250 damage within 5 squares. On ability cast, transform into a " + "Harbinger of the Apocalypse for 15 seconds. " + "While transformed, +20 Speed, and +300 Maximum Shield (30 second cooldown)";
+               return "<b>Apocalypse:</b> " + "Every 3rd Critical hit spawns a lightning bolt on the damaged enemy that deals 750 - 1250 " + "damage within 5 squares. On ability cast transform into a Harbinger of the Apocalypse for 15 seconds. " + "While transformed gain +20 SPD and +20% Critical Hit Chance and your lightning bolts will always hit for 1250 (30 sec cooldown).";
             case SpecialEffects.MAGICAL_POISON:
                return "<b>Magical Poison:</b> " + "Shots fired by this quiver apply 1000 poison damage over 5 seconds on hit.";
             case SpecialEffects.CURSED_BARRAGE:
@@ -1468,7 +1483,39 @@ package rotmg.ui.tooltip
             case SpecialEffects.LIGHTNING_ROD:
                return "<b>Lightning Rod:</b> " + "Every 3rd weapon hit calls down a lightning strike, dealing 500 damage (+15 damage per WIS above 60) " + "on up to 3 targets (+1 target per 25 WIS above 75). For 2.5 seconds after casting your ability, " + "the lightning will strike on every hit instead of every 3rd hit (10 second cooldown).";
             case SpecialEffects.COLOSSAL_CURRENT:
-               return "<b>Colossal Current:</b> " + "After marking a target, a 3 second timer is placed on them. Targets may be marked again, though " + "their timer will not reset. For each mark placed on a target after the timer expires, 6 lightning " + "strikes will land within 0.75 squares of the target every 0.2 seconds, exploding for 850 damage " + "within 2.5 squares, paralyzing targets within 2.5 squares for 1 second, and shooting 3 projectiles " + "radially that deal 450 damage each.";
+               return "<b>Colossal Current:</b> " + "After marking a target, a 2 second timer is placed on them. Targets may be marked again, though " + "their timer will not reset. For each mark placed on a target after the timer expires, 6 lightning " + "strikes will land within 0.75 squares of the target every 0.2 seconds, exploding for 1200 damage " + "within 2.5 squares, paralyzing targets within 2.5 squares for 1 second, and shooting 3 projectiles " + "radially that deal 550 damage each.";
+            case SpecialEffects.SATANIC_TEXTS:
+               return "<b>Satanic Texts:</b> " + "Every 4000 damage dealt to enemies by you summons a demon, up to a maximum of 10. " + "These demons aggressively swarm enemies, dealing 500 damage every 1.5 seconds. " + "When below 70% of your maximum health, using your ability sacrifices half of your demons, " + "and in exchange you restore 40 health (+1 per VIT) for every demon sacrificed.";
+            case SpecialEffects.TEMPEST:
+               return "<b>Tempest:</b> " + "On ability cast, summon a rain cloud at cursor that zaps enemies every 3 seconds, " + "dealing 750 damage (+8 damage per wis) within 4.5 squares. " + "You can summon up to 3 rain clouds at once. ";
+            case SpecialEffects.IGNIS_FATUUS:
+               return "<b>Ignis Fatuus:</b> " + "Casting this ability creates an inferno around yourself for 5 seconds, dealing 1000 damage " + "every 0.7 seconds within 6 sqrs, casting your ability again while this inferno is active " + "refreshes it’s duration and causes it to deal an additional 500 damage per cast (up to 2000) " + "and increasing its range by 1 sqr per cast (up to 8) ";
+            case SpecialEffects.FLOATING_GRAVEYARD:
+               return "<b>Floating Graveyard:</b> " + "2% of damage dealt by Drowned Souls is leeched to you as health. " + "Taking damage causes 1 of your souls to be resummoned.";
+            case SpecialEffects.GUARDIANS_WRATH:
+               return "<b>Guardian\'s Wrath:</b> " + "Hitting an enemy with your weapon spawns a ring of 8 molten blades that converge onto the " + "enemy closest to your cursor, dealing 125 armor piercing damage (+2 damage per WIS) each " + "(1.5 sec cooldown).";
+            case SpecialEffects.ROYAL_PRESENCE:
+               return "<b>Royal Presence:</b> " + "Enemies that get within 5 squares of you are inflicted with Slowed for 3 seconds.";
+            case SpecialEffects.DEMON_SKIN:
+               return "<b>Demon Skin:</b> " + "10% of damage dealt to you is reduced from your Defense for 3 seconds, " + "and twice that is gained as Vitality.";
+            case SpecialEffects.CYCLE_OF_LIFE:
+               return "<b>Cycle of Life:</b> " + "Taking damage causes you to go Invisible for 3 seconds and erupt into flames, " + "leaving behind five withering flames and a burning corpse for 3 seconds. " + "Each withering flame deals 300 armor piercing damage every 0.5 seconds and the " + "burning corpse functions as a decoy (12 second cooldown).";
+            case SpecialEffects.LAEVATEIN:
+               return "<b>Laevatein:</b> " + "Summons a flaming sword to fight alongside you that follows your cursor up to 4.5 tiles " + "away from you, firing a barrage of 6 magma shards at the enemy closest to cursor every " + "second each dealing 500. Using your ability causes it to explode, " + "dealing 5000 damage within 5 sqrs and inflicting Armor Broken for 4 seconds";
+            case SpecialEffects.EVASIVE_MANEUVERS:
+               return "<b>Evasive Maneuvers:</b> " + "Using your ability allows you to dash in the direction your cursor is facing. " + "Dashing grants you +75 Max Shield (stackable) and 2x rate of fire (non-stackable) for 2.5 seconds. " + "You can store up to three dashes, and you passively regenerate a dash every 6 seconds, even while unequipped.";
+            case SpecialEffects.ICE_AGE:
+               return "<b>Ice Age:</b> " + "Every hit dealt to an enemy applies a stack of “Frigid,” up to 20 stacks. " + "Each stack of Frigid slows enemy movement by 2.5%, up to a 50% movement speed reduction. " + "Not hitting an enemy for 5 seconds removes all Frigid stacks.";
+            case SpecialEffects.NATURES_EMBRACE:
+               return "<b>Nature\'s Embrace:</b> " + "Casting your ability surrounds you with 0 root(s) (+1 root per 8 DEF, up to 10) for 8 seconds " + "that share your HP, DEF and VIT stats, blocking shots from enemies for you. " + "250% of the damage taken by your roots is reflected back to the attacker (15 sec cooldown). " + "When you take more than 50 damage spawn 3 of these roots in front of you (5 sec cooldown).";
+            case SpecialEffects.SCORNED:
+               return "<b>Scorned:</b> " + "Your ability applies Scorn, a debuff capable of stacking up to a maximum of 10 seconds. " + "Scorn’s damage scales with duration, with each applied second dealing 300 damage per second. " + "You regenerate 1% of damage dealt by Scorn as self healing.";
+            case SpecialEffects.STORM_APPROACHING:
+               return "<b>Storm Approaching:</b> " + "Moving charges a meter that, when filled, summons a hurricane for 6 seconds that slowly " + "chases the nearest enemy, dealing 1000 damage every 1.5 seconds within 8 squares. " + "This damage is capable of critically hitting, and has double your critical hit chance and critical hit multiplier.";
+            case SpecialEffects.LEGION_OF_THE_DEEP:
+               return "<b>Legion of the Deep:</b> " + "Passively attract up to 3 Deep Sea Beasts that have 750 HP and 50 DEF each. " + "Beasts deal 450 damage every second to nearby enemies. " + "On ability cast, spawn a wall of 4 Sea Mares that charge towards your cursor, " + "dealing 1250 to enemies on contact and applying Paralyzed and Armor Broken for 3 seconds. (8 sec cooldown)";
+            case SpecialEffects.SCOURGE_OF_THE_REALMS:
+               return "<b>Scourge of the Realms:</b> " + "While above 60% HP, an aggressive Void Shade will attack nearby enemies, " + "regenerating 10 MP with its attacks. " + "While below 60% HP, every 5 seconds spawn three Void Fragments scattered far away from you, " + "which will heal you for 50 HP over 2 secs and grant 5% Damage Reduction for 3 secs when picked up.";
             default:
                return null;
          }
@@ -1533,6 +1580,10 @@ package rotmg.ui.tooltip
          var lifetime:Number = proj.LifetimeMS;
          var rang:Number = speed * lifetime;
          var rang2:Number = 0;
+         if(proj.Parametric)
+         {
+            return proj.Magnitude;
+         }
          if(doReforge)
          {
             realSpeed = Boolean(this.itemData.Reforge) && this.itemData.Reforge.ItemType == "Weapon" ? proj.RealSpeed + this.itemData.getStatChange(proj.RealSpeed,"ShotSpeed") : proj.RealSpeed;
@@ -1908,8 +1959,6 @@ package rotmg.ui.tooltip
       private function makeCustomIEData() : void
       {
          var eff:int = 0;
-         var demonEyesCooldown:int = 0;
-         var wismoddedCooldown:Number = NaN;
          var chance:int = 0;
          var bleedDamage:int = 0;
          var wisModBleed:int = 0;
@@ -1922,18 +1971,6 @@ package rotmg.ui.tooltip
          {
             switch(eff)
             {
-               case SpecialEffects.DEMON_EYES:
-                  demonEyesCooldown = 5;
-                  wismoddedCooldown = ApplyDemonEyesWisMod(demonEyesCooldown,this.player);
-                  if(wismoddedCooldown != demonEyesCooldown)
-                  {
-                     str += "Demon Eyes Cooldown: " + GetWisModText(demonEyesCooldown,ApplyDemonEyesWisMod(demonEyesCooldown,this.player),TooltipHelper.NO_DIFF_COLOR) + " secs";
-                  }
-                  else
-                  {
-                     str += "Demon Eyes Cooldown: " + TooltipHelper.wrapInFontTag("" + demonEyesCooldown,TooltipHelper.NO_DIFF_COLOR) + " secs";
-                  }
-                  break;
                case SpecialEffects.SOULFLAMES:
                   if(this.player)
                   {
@@ -2455,6 +2492,7 @@ package rotmg.ui.tooltip
          var stat:String = null;
          var condition:String = null;
          var ae2:ActivateEffect = null;
+         var str:String = null;
          var itemDataAes:Array = null;
          var equipDataAes:Array = null;
          var ae1:ActivateEffect = null;
@@ -2575,6 +2613,7 @@ package rotmg.ui.tooltip
                maxTargetsColor = TooltipHelper.BETTER_COLOR;
                healAmountColor = TooltipHelper.BETTER_COLOR;
             }
+            str = "";
             switch(ae.EffectName)
             {
                case ActivationType.GENERIC_ACTIVATE:
@@ -2724,7 +2763,19 @@ package rotmg.ui.tooltip
                   this.attributes += "Airborne Spell: " + textColor(ae.Amount,amountColor) + " shots";
                   break;
                case ActivationType.ALLY:
-                  this.attributes += "Summons a " + noDiffColor(ae.ObjectId) + " for " + noDiffColor(ae.DurationSec) + " seconds";
+                  if(ae.Amount <= 1)
+                  {
+                     str = "Summons a {NAME} for {DURATION} seconds";
+                  }
+                  else
+                  {
+                     str = "Summons {AMOUNT} of {NAME} for {DURATION} seconds";
+                  }
+                  if(ae.Center == "mouse" || ae.Center == "cursor")
+                  {
+                     str += " at cursor";
+                  }
+                  this.attributes += str.replace("{NAME}",noDiffColor(ae.ObjectId)).replace("{DURATION}",noDiffColor(wisModded.DurationSec) + wisModded.ModDurationSec).replace("{AMOUNT}",noDiffColor(ae.Amount));
                   break;
                case ActivationType.PURIFY_MADNESS:
                   this.attributes += "Purifies " + noDiffColor("King\'s Madness") + " and resets Madness buildup";
@@ -2837,6 +2888,28 @@ package rotmg.ui.tooltip
                   break;
                case ActivationType.HALLOWEEN_CANDY:
                   this.attributes += "This candy is added to the {TYPE} candy pool, to empower Realm Event dungeons".replace("{TYPE}",noDiffColor(ae.Type));
+                  break;
+               case ActivationType.HEALTH_OVER_TIME:
+                  if(ae.Amount >= 0)
+                  {
+                     str = "Heals {HEAL_AMOUNT} HP over {DURATION} sec";
+                  }
+                  else
+                  {
+                     str = "Drains {DRAIN_AMOUNT} HP over {DURATION} sec";
+                  }
+                  this.attributes += str.replace("{HEAL_AMOUNT}",textColor(wisModded.Amount,amountColor) + wisModded.ModAmount).replace("{DRAIN_AMOUNT}",textColor(Math.abs(wisModded.Amount),TooltipHelper.WORSE_COLOR)).replace("{DURATION}",textColor(wisModded.DurationSec,durationColor) + wisModded.ModDurationSec);
+                  break;
+               case ActivationType.MANA_OVER_TIME:
+                  if(ae.Amount >= 0)
+                  {
+                     str = "Regenerates {HEAL_AMOUNT} MP over {DURATION} sec";
+                  }
+                  else
+                  {
+                     str = "Drains {DRAIN_AMOUNT} MP over {DURATION} sec";
+                  }
+                  this.attributes += str.replace("{HEAL_AMOUNT}",textColor(wisModded.Amount,amountColor) + wisModded.ModAmount).replace("{DRAIN_AMOUNT}",textColor(Math.abs(wisModded.Amount),TooltipHelper.WORSE_COLOR)).replace("{DURATION}",textColor(wisModded.DurationSec,durationColor) + wisModded.ModDurationSec);
             }
             if(ae.OnRelease)
             {
@@ -3057,12 +3130,6 @@ package rotmg.ui.tooltip
                   break;
                case SpecialEffects.DEFENSE_MATRIX:
                   bonuses[116] = (bonuses[116] == null ? 0 : bonuses[116]) + 150;
-                  break;
-               case SpecialEffects.COSMIC_HERMIT:
-                  bonuses[116] = (bonuses[116] == null ? 0 : bonuses[116]) + 25;
-                  break;
-               case SpecialEffects.COSMIC_SAGE:
-                  bonuses[116] = (bonuses[116] == null ? 0 : bonuses[116]) + 50;
                   break;
             }
          }

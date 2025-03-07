@@ -162,6 +162,10 @@ package rotmg.constants
       
       public static const SHOW_EFFECT:String = "ShowEffect";
       
+      public static const HEALTH_OVER_TIME:String = "HealthOverTime";
+      
+      public static const MANA_OVER_TIME:String = "ManaOverTime";
+      
       public function ActivationType()
       {
          super();

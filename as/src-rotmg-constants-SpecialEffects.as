@@ -447,6 +447,38 @@ package rotmg.constants
       
       public static const COLOSSAL_CURRENT:int = 220;
       
+      public static const SATANIC_TEXTS:int = 228;
+      
+      public static const TEMPEST:int = 229;
+      
+      public static const IGNIS_FATUUS:int = 230;
+      
+      public static const FLOATING_GRAVEYARD:int = 231;
+      
+      public static const GUARDIANS_WRATH:int = 232;
+      
+      public static const ROYAL_PRESENCE:int = 233;
+      
+      public static const DEMON_SKIN:int = 234;
+      
+      public static const CYCLE_OF_LIFE:int = 235;
+      
+      public static const LAEVATEIN:int = 236;
+      
+      public static const EVASIVE_MANEUVERS:int = 237;
+      
+      public static const ICE_AGE:int = 238;
+      
+      public static const NATURES_EMBRACE:int = 239;
+      
+      public static const SCORNED:int = 240;
+      
+      public static const STORM_APPROACHING:int = 241;
+      
+      public static const LEGION_OF_THE_DEEP:int = 242;
+      
+      public static const SCOURGE_OF_THE_REALMS:int = 243;
+      
       public static const NUM_SPECIAL_EFFECTS:int = 221;
       
       public function SpecialEffects()
